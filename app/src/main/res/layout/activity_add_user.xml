@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.Welcome">
 
     <EditText
         android:id="@+id/idEdtUserName"
@@ -45,14 +45,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Demo"
-        android:textAllCaps="false"/>
+        style="@style/MyButton"/>
     <Button
         android:id="@+id/idBtnAddUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Benutzer Hinzufügen"
-        android:textAllCaps="false" />
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/idBtnBack"
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Zurück"
-        android:textAllCaps="false" />
+        style="@style/MyBackButton"/>
 
 
 

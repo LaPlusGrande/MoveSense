@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Demo">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.Demo">
 
     <Button
         android:id="@+id/back_button2"
@@ -12,10 +12,10 @@
         android:layout_height="50dp"
         android:layout_marginStart="350dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#3F51B5"
         android:text="Zurück"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/demo_tendBody" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_tendBody"
+        style="@style/MyBackButton"/>
 
     <TextView
         android:id="@+id/textView1"
@@ -24,7 +24,7 @@
         android:layout_marginStart="350dp"
         android:layout_marginTop="20dp"
         android:text="Übungen"
-        android:textColor="#0E0D0D"
+        android:textColor="@color/primaryTextColor"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,11 +35,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
         android:text="Äpfel pflücken"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_armRotation"
@@ -47,11 +47,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
         android:text="Arme kreisen"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/demo_applePicking"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_armSide"
@@ -59,11 +59,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
         android:text="Arme heben"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/demo_armRotation"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_airBoxing"
@@ -71,11 +71,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
         android:text="Luftboxen"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/demo_armSide"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_clappingHands"
@@ -83,11 +83,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Hände klatschen"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/demo_applePicking" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_applePicking"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_ellbowHand"
@@ -95,11 +95,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Hände öffnen und Ellenbogen strecken"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/demo_clappingHands"
-        app:layout_constraintTop_toBottomOf="@+id/demo_armRotation" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_armRotation"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_elbowStretch"
@@ -107,11 +107,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Ellenbogen strecken"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/demo_ellbowHand"
-        app:layout_constraintTop_toBottomOf="@+id/demo_armSide" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_armSide"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_followArms"
@@ -119,11 +119,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Oberkörper vorbeugen und Arme verfolgen"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/demo_elbowStretch"
-        app:layout_constraintTop_toBottomOf="@+id/demo_airBoxing" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_airBoxing"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_liftArms"
@@ -131,11 +131,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Oberkörper vorbeugen"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/demo_clappingHands" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_clappingHands"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_openHand"
@@ -143,11 +143,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Hände öffnen und schließen"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/demo_liftArms"
-        app:layout_constraintTop_toBottomOf="@+id/demo_ellbowHand" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_ellbowHand"
+        style="@style/MyButton"/>
 
     <Button
         android:id="@+id/demo_tendBody"
@@ -155,10 +155,10 @@
         android:layout_height="100dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="#2196F3"
         android:text="Oberkörper seitlich beugen"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/demo_openHand"
-        app:layout_constraintTop_toBottomOf="@+id/demo_elbowStretch" />
+        app:layout_constraintTop_toBottomOf="@+id/demo_elbowStretch"
+        style="@style/MyButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

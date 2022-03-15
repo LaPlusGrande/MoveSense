@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+<!--colour ROBUST physical therapy-->
+
+    <color name="primaryColor">#2bbda5</color>
+    <color name="primaryLightColor">#6bf0d6</color>
+    <color name="primaryDarkColor">#008c76</color>
+    <color name="secondaryColor">#2d43bd</color>
+    <color name="secondaryLightColor">#6d6ef0</color>
+    <color name="secondaryDarkColor">#001d8c</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+
 </resources>

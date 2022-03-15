@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.mypepper"
+        applicationId "de.fhkiel.srcms.apps.therapy.physical"
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
 

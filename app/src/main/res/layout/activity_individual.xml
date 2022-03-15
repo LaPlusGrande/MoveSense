@@ -4,30 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Individual">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.Individual">
 
     <Button
         android:id="@+id/idBtnReadUser"
+        style="@style/MyButton"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="148dp"
         android:text="Alle Benutzer Anzeigen"
-        android:textAllCaps="false"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/idBtnAddUser"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/idBtnAddUser"
+        style="@style/MyButton"
         android:layout_width="300dp"
         android:layout_height="150dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="50dp"
         android:text="Benutzer hinzufügen"
-        android:textAllCaps="false"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,8 +37,8 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#3F51B5"
         android:text="Zurück"
-        android:textAllCaps="false"
         android:textSize="24sp"
+        style="@style/MyBackButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idBtnReadUser" />
@@ -52,6 +50,7 @@
         android:layout_marginTop="10dp"
         android:text="Individuell"
         android:textSize="96sp"
+        android:textColor="@color/primaryTextColor"
         app:layout_constraintBottom_toTopOf="@+id/idBtnReadUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

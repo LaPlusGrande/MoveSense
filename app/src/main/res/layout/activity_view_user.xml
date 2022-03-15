@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".database.ViewUser">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical._database.ViewUser">
 
-    <!--recycler view for displaying our courses-->
+    <!--recycler view for displaying user-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVUser"
         android:layout_width="match_parent"
