@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.fhkiel.srcms.apps.therapy.physical.p.workout">
+    package="de.fhkiel.srcms.apps.therapy.physical.p.workout"
+    android:installLocation="preferExternal">
 
     <uses-feature android:name="com.softbank.hardware.pepper" />
 
