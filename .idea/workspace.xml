@@ -9,18 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bef5765f-d577-4925-a698-caf8a8926348" name="Default Changelist" comment="Updated gradle and package names">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/My_Pepper.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/My_Pepper.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/GroupeEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/GroupeEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Individual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Welcome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAnimation.java" afterDir="false" />
+    <list default="true" id="bef5765f-d577-4925-a698-caf8a8926348" name="Default Changelist" comment="Updated renaming packages">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/UserRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/UserRVAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647515250109</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated renaming packages">
+      <created>1647515505708</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647515505708</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated gradle and package names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated gradle and package names" />
+    <MESSAGE value="Updated renaming packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated renaming packages" />
   </component>
 </project>

@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import de.fhkiel.srcms.apps.therapy.physical.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
 import java.util.ArrayList;
 
