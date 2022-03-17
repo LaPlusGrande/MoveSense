@@ -7,7 +7,7 @@ android {
     buildToolsVersion '32.0.0'
 
     defaultConfig {
-        applicationId "de.fhkiel.srcms.apps.therapy.physical"
+        applicationId "de.fhkiel.srcms.apps.therapy.physical.p.workout"
         minSdkVersion 23
         targetSdkVersion 32
         versionCode 1
