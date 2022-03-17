@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
-import de.fhkiel.srcms.apps.therapy.physical.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
 public class Welcome extends RobotActivity {
 

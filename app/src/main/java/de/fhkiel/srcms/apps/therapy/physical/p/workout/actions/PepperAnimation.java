@@ -4,7 +4,7 @@ import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.builder.AnimateBuilder;
 import com.aldebaran.qi.sdk.builder.AnimationBuilder;
 import com.aldebaran.qi.sdk.object.actuation.Animation;
-import de.fhkiel.srcms.apps.therapy.physical.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
 import java.util.concurrent.ExecutionException;
 

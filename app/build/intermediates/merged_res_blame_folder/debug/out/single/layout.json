@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_main.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/content_main.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_perfrom_demo.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_perfrom_demo.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_demo.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_demo.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_individual.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_individual.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_start.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_start.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_view_user.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_view_user.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_perform_activity.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_perform_activity.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_user.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_add_user.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/user_rv_item.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/user_rv_item.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_update_user.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_update_user.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_groupe_entry.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_groupe_entry.xml"
+    },
+    {
+        "merged": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/home/hannes/Workspaces/android/Pepper/physio-workout/app/src/main/res/layout/activity_login.xml"
+    }
+]

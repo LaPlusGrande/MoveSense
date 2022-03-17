@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import de.fhkiel.srcms.apps.therapy.physical.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.database.AddUser;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.database.ViewUser;
 

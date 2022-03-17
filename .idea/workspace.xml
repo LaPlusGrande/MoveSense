@@ -9,87 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bef5765f-d577-4925-a698-caf8a8926348" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_dynamicanimation_dynamicanimation_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_airbnb_android_lottie_2_7_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aldebaran_libqi_java_android_4_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aldebaran_qisdk_1_7_5_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aldebaran_qisdk_core_1_7_5_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aldebaran_qisdk_design_1_7_5_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aldebaran_qisdk_model_1_7_5_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aldebaran_robotservice_client_2_1_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_3_72.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bef5765f-d577-4925-a698-caf8a8926348" name="Default Changelist" comment="Updated gradle and package names">
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/My_Pepper.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/My_Pepper.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/de/fhkiel/srcms/apps/therapy/physical/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/GroupeEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/GroupeEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Individual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/PerformActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/PerformDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Welcome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/actions/PepperAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/actions/PepperAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/actions/PepperSay.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperSay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/database/AddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/AddUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/database/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/DBHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/database/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/UpdateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/database/UserModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/UserModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/database/UserRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/UserRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/database/ViewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/database/ViewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_demo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_groupe_entry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_groupe_entry.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_individual.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_individual.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_perform_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_perform_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_perfrom_demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_perfrom_demo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_update_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/de/fhkiel/srcms/apps/therapy/physical/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/GroupeEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/GroupeEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/PerformDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Welcome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAnimation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,11 +50,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -195,6 +129,14 @@
       <option name="presentableId" value="Default" />
       <updated>1647514773423</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated gradle and package names">
+      <created>1647515250109</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647515250109</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,5 +149,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated gradle and package names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated gradle and package names" />
   </component>
 </project>
