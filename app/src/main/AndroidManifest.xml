@@ -34,7 +34,8 @@
         <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
         <!-- <activity android:name=".OpenHand" /> -->
         <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome">
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
