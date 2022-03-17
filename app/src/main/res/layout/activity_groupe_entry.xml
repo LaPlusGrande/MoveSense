@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.fhkiel.srcms.apps.therapy.physical.GroupeEntry">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry">
 
     <Button
         android:id="@+id/button_hard_animation"

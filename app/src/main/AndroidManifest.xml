@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.fhkiel.srcms.apps.therapy.physical">
+    package="de.fhkiel.srcms.apps.therapy.physical.p.workout">
 
     <uses-feature android:name="com.softbank.hardware.pepper" />
 
@@ -14,27 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialRobotCMS">
         <activity
-            android:name=".p.database.UpdateUser"
+            android:name=".database.UpdateUser"
             android:exported="false" />
         <activity
-            android:name=".p.database.ViewUser"
+            android:name=".database.ViewUser"
             android:exported="false" />
         <activity
-            android:name=".p.database.AddUser"
+            android:name=".database.AddUser"
             android:exported="false" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.Individual"
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Individual"
             android:exported="false" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.PerformDemo"
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformDemo"
             android:exported="true" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.PerformActivity"
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformActivity"
             android:exported="true" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
         <!-- <activity android:name=".OpenHand" /> -->
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.GroupeEntry" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.Welcome">
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry" />
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

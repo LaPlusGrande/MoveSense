@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_add_user.xml" value="0.25" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_demo.xml" value="0.5" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_editing.xml" value="0.266015625" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_groupe_entry.xml" value="0.266015625" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_groupeworkout.xml" value="0.18" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_indi.xml" value="0.25546875" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_individual.xml" value="0.22" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_perform.xml" value="0.25546875" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_performHard.xml" value="0.191015625" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_perform_activity.xml" value="0.21" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_perform_demo.xml" value="0.11391625615763547" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_perform_easy.xml" value="0.191015625" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_perform_hard.xml" value="0.191015625" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_perfrom_demo.xml" value="0.33" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_start.xml" value="0.195703125" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_update_user.xml" value="0.26447044334975367" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_view_use.xml" value="0.227734375" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_view_user.xml" value="0.26447044334975367" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/activity_workout.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut/app/src/main/res/layout/user_rv_item.xml" value="0.26447044334975367" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/drawable-v24/ic_baseline_lock_24.xml" value="0.1605" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_add_user.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_demo.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_groupe_entry.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_individual.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_perform_activity.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_perfrom_demo.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_start.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_update_user.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/MyWorkOut1/app/src/main/res/layout/activity_view_user.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_add_user.xml" value="0.2512315270935961" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_groupe_entry.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_login.xml" value="0.2512315270935961" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_perform_activity.xml" value="0.1" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_start.xml" value="0.2512315270935961" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_update_user.xml" value="0.2512315270935961" />
-        <entry key="..\:/Users/2609l/AndroidStudioProjects/Physio Workout/app/src/main/res/layout/activity_view_user.xml" value="0.2512315270935961" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
