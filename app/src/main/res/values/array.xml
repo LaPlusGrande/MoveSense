@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="gif_array">
+        <item>@drawable/banana</item>
+        <item>@drawable/cherry</item>
+        <item>@drawable/coconut</item>
+        <item>@drawable/melone</item>
+        <item>@drawable/orange</item>
+    </array>
+</resources>
