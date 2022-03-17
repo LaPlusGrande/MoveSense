@@ -12,7 +12,7 @@ import android.widget.Toast;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.Individual;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformActivity;
 
-import de.fhkiel.srcms.apps.therapy.physical.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
 public class UpdateUser extends AppCompatActivity {
 

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import de.fhkiel.srcms.apps.therapy.physical.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
 import java.util.ArrayList;
 
