@@ -1,4 +1,4 @@
-package de.fhkiel.srcms.apps.therapy.physical._database;
+package de.fhkiel.srcms.apps.therapy.physical.p.database;
 
 import android.content.Context;
 import android.content.Intent;

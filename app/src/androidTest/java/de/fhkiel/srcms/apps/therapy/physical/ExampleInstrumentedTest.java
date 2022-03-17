@@ -1,4 +1,4 @@
-package de.example.mypepper;
+package de.fhkiel.srcms.apps.therapy.physical;
 
 import android.content.Context;
 

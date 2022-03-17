@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialRobotCMS">
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical._database.UpdateUser"
+            android:name=".p.database.UpdateUser"
             android:exported="false" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical._database.ViewUser"
+            android:name=".p.database.ViewUser"
             android:exported="false" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical._database.AddUser"
+            android:name=".p.database.AddUser"
             android:exported="false" />
         <activity
             android:name="de.fhkiel.srcms.apps.therapy.physical.Individual"

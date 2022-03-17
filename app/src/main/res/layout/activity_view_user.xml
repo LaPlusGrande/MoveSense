@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.fhkiel.srcms.apps.therapy.physical._database.ViewUser">
+    tools:context=".p.database.ViewUser">
 
     <!--recycler view for displaying user-->
     <androidx.recyclerview.widget.RecyclerView

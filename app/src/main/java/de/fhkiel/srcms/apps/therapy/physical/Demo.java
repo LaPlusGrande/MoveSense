@@ -10,9 +10,8 @@ import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
-import de.fhkiel.srcms.apps.therapy.physical.R;
 
-import de.fhkiel.srcms.apps.therapy.physical._database.AddUser;
+import de.fhkiel.srcms.apps.therapy.physical.p.database.AddUser;
 
 public class Demo extends RobotActivity implements RobotLifecycleCallbacks {
 

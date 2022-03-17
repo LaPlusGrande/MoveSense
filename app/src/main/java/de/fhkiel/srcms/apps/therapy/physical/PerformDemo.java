@@ -10,9 +10,8 @@ import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
-import de.fhkiel.srcms.apps.therapy.physical.R;
 
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperAnimation;
+import de.fhkiel.srcms.apps.therapy.physical.p.actions.PepperAnimation;
 
 public class PerformDemo extends RobotActivity implements RobotLifecycleCallbacks {
 

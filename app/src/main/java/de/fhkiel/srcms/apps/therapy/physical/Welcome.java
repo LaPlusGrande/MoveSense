@@ -21,7 +21,7 @@ public class Welcome extends RobotActivity {
         setContentView(R.layout.activity_start);
 
         groupe_button = (Button) findViewById(R.id.btn_groupe);
-        individual_button = (Button) findViewById(R.id.btn_individual);
+//        individual_button = (Button) findViewById(R.id.btn_individual);
 
         groupe_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,13 +31,13 @@ public class Welcome extends RobotActivity {
             }
         });
 
-        individual_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent individualIntent = new Intent(Welcome.this,Individual.class);
-                startActivity(individualIntent);
-            }
-        });
+//        individual_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent individualIntent = new Intent(Welcome.this,Individual.class);
+//                startActivity(individualIntent);
+//            }
+//        });
 
     }
 

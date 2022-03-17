@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import de.fhkiel.srcms.apps.therapy.physical.R;
-
-import de.fhkiel.srcms.apps.therapy.physical._database.AddUser;
-import de.fhkiel.srcms.apps.therapy.physical._database.ViewUser;
+import de.fhkiel.srcms.apps.therapy.physical.p.database.AddUser;
+import de.fhkiel.srcms.apps.therapy.physical.p.database.ViewUser;
 
 public class Individual extends AppCompatActivity {
 

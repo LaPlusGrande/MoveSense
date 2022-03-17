@@ -4,9 +4,9 @@ import android.util.Log;
 
 import com.aldebaran.qi.sdk.QiContext;
 
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperAction;
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperAnimation;
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperSay;
+import de.fhkiel.srcms.apps.therapy.physical.p.actions.PepperAction;
+import de.fhkiel.srcms.apps.therapy.physical.p.actions.PepperAnimation;
+import de.fhkiel.srcms.apps.therapy.physical.p.actions.PepperSay;
 
 public class Exercise extends PepperAction {
 

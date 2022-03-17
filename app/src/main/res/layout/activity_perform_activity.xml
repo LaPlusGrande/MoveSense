@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/cancel_back_button"
         android:layout_width="250dp"
-        android:layout_height="0dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="40dp"
         android:text="Zurück"
         android:textSize="34sp"
