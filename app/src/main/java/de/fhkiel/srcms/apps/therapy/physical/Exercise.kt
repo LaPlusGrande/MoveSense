@@ -14,6 +14,7 @@ class Exercise : PepperAction(){
         var myAnimation = PepperAnimation()
         var setback : Int = 1
 
+        resetPepper()
         try {
             for (i in 1..iter ) {
                 for (item in arr) {
@@ -112,6 +113,7 @@ class Exercise : PepperAction(){
                             mySay.doSay(qiContext,"\\rspd=80\\ bewegt lediglich euren oberkörper von der einen zur anderen Seite \\pau=200\\" +
                                         "\\rspd=80\\ und versucht dabei möglichst nicht vom Stuhl zu fallen \\pau=200\\ wir bewegen uns hin und her \\pau=200\\ hin und her")
                             myAnimation.doTendBody(qiContext)
+                            myAnimation.doRotation(qiContext)
                         }
                         12 -> {
                             mySay.doSay(qiContext,"\\rspd=80\\ jetzt dürft ihr eine kleine Pause machen \\pau=200\\ legt dafür die Hände auf den Bauch \\pau=200\\ und versucht die Atmung zu spüren\\pau=500\\" +
@@ -121,7 +123,7 @@ class Exercise : PepperAction(){
                             myAnimation.doRotation(qiContext)
                         }
                     }
-                    waitForAction()
+//                    waitForAction()
                 }
             }
         }catch (e : Exception){

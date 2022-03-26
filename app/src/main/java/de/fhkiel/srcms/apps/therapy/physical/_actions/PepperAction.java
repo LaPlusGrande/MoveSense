@@ -8,6 +8,8 @@ public class PepperAction {
     public static Future<Void> currentSay = null;
     public static boolean cancelled = false;
 
+//    private var currentMove: Future<Void>? = null
+
     public static void abortPepper(){
         cancelled = true;
         if (currentMove != null)
