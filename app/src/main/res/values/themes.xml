@@ -16,18 +16,15 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="myButton">
-        <item name="backgroundTint">@color/secondaryColor</item>
+    <style name="MyBackButton">
         <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:backgroundTint">@color/secondaryDarkColor</item>
+        <item name="textAllCaps">false</item>
     </style>
 
-    <style name="myBackButton">
-        <item name="backgroundTint">@color/secondaryDarkColor</item>
+    <style name="MyButton">
         <item name="android:textColor">@color/secondaryTextColor</item>
-    </style>
-
-    <style name="myStartButton">
-        <item name="backgroundTint">@color/secondaryLightColor</item>
-        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:backgroundTint">@color/secondaryColor</item>
+        <item name="textAllCaps">false</item>
     </style>
 </resources>
