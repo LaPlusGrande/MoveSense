@@ -1,7 +1,6 @@
-package de.fhkiel.srcms.apps.therapy.physical
+package de.fhkiel.srcms.apps.therapy.physical.p.workout
 
 import android.content.Intent
-import android.content.res.TypedArray
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -9,8 +8,11 @@ import android.widget.ImageView
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.`object`.conversation.Say
+import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 import com.bumptech.glide.Glide
+import de.fhkiel.srcms.apps.therapy.physical.R
 
 class Perform : RobotActivity(), RobotLifecycleCallbacks {
 
@@ -52,6 +54,10 @@ class Perform : RobotActivity(), RobotLifecycleCallbacks {
                 val arr : IntArray = intArrayOf(10,7,6,1,4,9,8,2,5,12,0)
                 val myExercise = Exercise()
                 if (qiContext != null) {
+                    val say: Say = SayBuilder.with(qiContext)
+                        .withText("\\rspd=80\\ schön euch zu sehen \\pau=500\\ lasst uns ein paar schwere Übungen machen")
+                        .build()
+                    say.run()
                     myExercise.doExercise(qiContext, arr, iter)
                 }
             }
@@ -60,6 +66,10 @@ class Perform : RobotActivity(), RobotLifecycleCallbacks {
                 val arr : IntArray = intArrayOf(10,7,6,5,11,3,12,0)
                 val myExercise = Exercise()
                 if (qiContext != null) {
+                    val say: Say = SayBuilder.with(qiContext)
+                        .withText("\\rspd=80\\ schön euch zu sehen \\pau=500\\ lasst uns ein paar schwere Übungen machen")
+                        .build()
+                    say.run()
                     myExercise.doExercise(qiContext, arr, iter)
                 }
             }

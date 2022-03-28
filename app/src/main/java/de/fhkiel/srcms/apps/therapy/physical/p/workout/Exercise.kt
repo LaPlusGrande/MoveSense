@@ -1,10 +1,10 @@
-package de.fhkiel.srcms.apps.therapy.physical
+package de.fhkiel.srcms.apps.therapy.physical.p.workout
 
 import android.util.Log
 import com.aldebaran.qi.sdk.QiContext
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperAction
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperAnimation
-import de.fhkiel.srcms.apps.therapy.physical._actions.PepperSay
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAction
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperSay
 
 class Exercise : PepperAction(){
 

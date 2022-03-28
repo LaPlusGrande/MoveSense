@@ -1,4 +1,4 @@
-package de.fhkiel.srcms.apps.therapy.physical._actions;
+package de.fhkiel.srcms.apps.therapy.physical.p.workout.actions;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

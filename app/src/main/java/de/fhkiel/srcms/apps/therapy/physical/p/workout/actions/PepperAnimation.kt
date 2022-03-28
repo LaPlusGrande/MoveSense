@@ -1,12 +1,10 @@
-package de.fhkiel.srcms.apps.therapy.physical._actions
+package de.fhkiel.srcms.apps.therapy.physical.p.workout.actions
 
 import com.aldebaran.qi.sdk.QiContext
-import com.aldebaran.qi.sdk.`object`.actuation.Animate
 import com.aldebaran.qi.sdk.`object`.actuation.Animation
 import com.aldebaran.qi.sdk.builder.AnimateBuilder
 import com.aldebaran.qi.sdk.builder.AnimationBuilder
 import de.fhkiel.srcms.apps.therapy.physical.R
-import java.util.concurrent.Future
 
 class PepperAnimation : PepperAction() {
 

@@ -12,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhysioWorkout">
         <activity
-            android:name=".Perform"
+            android:name=".p.workout.Login"
             android:exported="false" />
         <activity
-            android:name=".GroupeEntry"
+            android:name=".p.workout.Perform"
             android:exported="false" />
         <activity
-            android:name=".Welcome"
+            android:name=".p.workout.GroupeEntry"
+            android:exported="false" />
+        <activity
+            android:name=".p.workout.Welcome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

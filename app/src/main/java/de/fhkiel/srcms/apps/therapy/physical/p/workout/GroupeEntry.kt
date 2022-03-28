@@ -1,4 +1,4 @@
-package de.fhkiel.srcms.apps.therapy.physical
+package de.fhkiel.srcms.apps.therapy.physical.p.workout
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
+import de.fhkiel.srcms.apps.therapy.physical.R
 
 class GroupeEntry : RobotActivity(), RobotLifecycleCallbacks {
 
@@ -48,11 +49,11 @@ class GroupeEntry : RobotActivity(), RobotLifecycleCallbacks {
     }
 
     override fun onRobotFocusLost() {
-        TODO("Not yet implemented")
+
     }
 
     override fun onRobotFocusRefused(reason: String?) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onDestroy() {

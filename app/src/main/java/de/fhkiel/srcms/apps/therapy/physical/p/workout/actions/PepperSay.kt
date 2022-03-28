@@ -1,4 +1,4 @@
-package de.fhkiel.srcms.apps.therapy.physical._actions
+package de.fhkiel.srcms.apps.therapy.physical.p.workout.actions
 
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.`object`.conversation.Say
