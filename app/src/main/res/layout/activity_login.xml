@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bestätigen"
+        android:text="Bestättigen"
         android:layout_below="@id/idEdtPassword"
         android:layout_centerHorizontal="true"
         android:textSize="50dp"

@@ -4,10 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".p.workout.GroupeEntry">
 
     <Button
         android:id="@+id/idBtnHardAnimation"
+=======
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry">
+
+    <Button
+        android:id="@+id/button_hard_animation"
+>>>>>>> origin/master
         android:layout_width="250dp"
         android:layout_height="150dp"
         android:layout_marginStart="120dp"
@@ -15,12 +22,20 @@
         android:text="Schwer"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/idTVWelcome"
+=======
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+>>>>>>> origin/master
         tools:ignore="MissingConstraints"
         style="@style/MyButton"/>
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/idBtnEasyAnimation"
+=======
+        android:id="@+id/button_easy_animation"
+>>>>>>> origin/master
         android:layout_width="250dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
@@ -28,12 +43,20 @@
         android:text="Einfach"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/idTVWelcome"
+=======
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+>>>>>>> origin/master
         tools:ignore="MissingConstraints"
         style="@style/MyButton"/>
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/idTVWelcome"
+=======
+        android:id="@+id/txt_welcome"
+>>>>>>> origin/master
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -45,14 +68,23 @@
         android:textColor="@color/primaryTextColor"/>
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/idBtnBack0"
+=======
+        android:id="@+id/back_button"
+>>>>>>> origin/master
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="250dp"
         android:text="Zurück"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/idTVWelcome"
         style="@style/MyBackButton"/>
 
+=======
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+        style="@style/MyBackButton"/>
+>>>>>>> origin/master
 </androidx.constraintlayout.widget.ConstraintLayout>
