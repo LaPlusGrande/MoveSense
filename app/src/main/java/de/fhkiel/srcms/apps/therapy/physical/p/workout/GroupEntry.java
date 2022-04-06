@@ -9,11 +9,10 @@ import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
-import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
-public class GroupeEntry extends RobotActivity implements RobotLifecycleCallbacks {
+public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks {
 
-    private static final String TAG = GroupeEntry.class.getName();
+    private static final String TAG = GroupEntry.class.getName();
 
     public Button hard_button;
     public Button easy_button;
@@ -26,7 +25,7 @@ public class GroupeEntry extends RobotActivity implements RobotLifecycleCallback
         // Register the RobotLifecycleCallbacks for this Activity.
         QiSDK.register(this, this);
 
-        setContentView(R.layout.activity_groupe_entry);
+        setContentView(R.layout.activity_group_entry);
 
         hard_button = (Button) findViewById(R.id.button_hard_animation);
         easy_button = (Button) findViewById(R.id.button_easy_animation);
@@ -35,7 +34,7 @@ public class GroupeEntry extends RobotActivity implements RobotLifecycleCallback
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent groupeIntent = new Intent(GroupeEntry.this, Welcome.class);
+                Intent groupeIntent = new Intent(GroupEntry.this, Welcome.class);
                 startActivity(groupeIntent);
             }
         });
@@ -48,7 +47,7 @@ public class GroupeEntry extends RobotActivity implements RobotLifecycleCallback
             @Override
             public void onClick(View view) {
 
-                Intent performIntent = new Intent(GroupeEntry.this, PerformActivity.class);
+                Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
                 performIntent.putExtra("keyPerform", "valueHardPerform");
                 startActivity(performIntent);
             }
@@ -57,7 +56,7 @@ public class GroupeEntry extends RobotActivity implements RobotLifecycleCallback
             @Override
             public void onClick(View view) {
 
-                Intent performIntent = new Intent(GroupeEntry.this, PerformActivity.class);
+                Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
                 performIntent.putExtra("keyPerform", "valueEasyPerform");
                 startActivity(performIntent);
             }

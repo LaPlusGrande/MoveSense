@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SocialRobotCMS">
+        android:theme="@style/Theme.PhysioWorkoutLight">
         <activity
             android:name=".database.UpdateUser"
             android:exported="false" />
@@ -24,18 +24,18 @@
             android:name=".database.AddUser"
             android:exported="false" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Individual"
+            android:name=".Individual"
             android:exported="false" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformDemo"
+            android:name=".PerformDemo"
             android:exported="true" />
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformActivity"
+            android:name=".PerformActivity"
             android:exported="true" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
+        <activity android:name=".Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
         <!-- <activity android:name=".OpenHand" /> -->
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome"
+        <activity android:name=".GroupEntry" />
+        <activity android:name=".Welcome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
