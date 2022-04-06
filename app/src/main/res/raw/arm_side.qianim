@@ -543,17 +543,4 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
-    <Labels fps="25" editor:groupName="Labels">
-        <Label frame="0">start arm side</Label>
-        <Label frame="60">arms straight side</Label>
-        <Label frame="120">arms down</Label>
-        <Label frame="180">arms straight side</Label>
-        <Label frame="240">arms down</Label>
-        <Label frame="300">arms straight side</Label>
-        <Label frame="361">arms down</Label>
-        <Label frame="420">arms straight side</Label>
-        <Label frame="480">arms down</Label>
-        <Label frame="540">arms straight side</Label>
-        <Label frame="600">finish arm side</Label>
-    </Labels>
 </Animation>

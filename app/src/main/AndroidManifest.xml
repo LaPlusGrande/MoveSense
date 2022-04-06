@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="de.fhkiel.srcms.apps.therapy.physical.p.workout"
     android:installLocation="preferExternal">
 
     <uses-feature android:name="com.softbank.hardware.pepper" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -13,23 +13,36 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PhysioWorkoutLight">
-
+        android:theme="@style/Theme.SocialRobotCMS">
         <activity
-            android:name=".Perform"
-            android:exported="true"
-            tools:ignore="MissingClass" />
-
-        <activity android:name=".GroupEntry" />
-
-        <activity android:name=".Welcome"
+            android:name=".database.UpdateUser"
+            android:exported="false" />
+        <activity
+            android:name=".database.ViewUser"
+            android:exported="false" />
+        <activity
+            android:name=".database.AddUser"
+            android:exported="false" />
+        <activity
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Individual"
+            android:exported="false" />
+        <activity
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformDemo"
+            android:exported="true" />
+        <activity
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.PerformActivity"
+            android:exported="true" />
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
+        <!-- <activity android:name=".OpenHand" /> -->
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry" />
+        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

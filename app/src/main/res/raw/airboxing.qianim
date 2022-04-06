@@ -528,17 +528,4 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
-    <Labels fps="25" editor:groupName="Labels">
-        <Label frame="0">start air boxing</Label>
-        <Label frame="60">starting position</Label>
-        <Label frame="120">left arm forward</Label>
-        <Label frame="180">right arm forward</Label>
-        <Label frame="240">left arm forward</Label>
-        <Label frame="300">right arm forward</Label>
-        <Label frame="360">left arm forward</Label>
-        <Label frame="420">right arm forward</Label>
-        <Label frame="480">left arm forward</Label>
-        <Label frame="540">right arm forward</Label>
-        <Label frame="600">finished airboxing</Label>
-    </Labels>
 </Animation>

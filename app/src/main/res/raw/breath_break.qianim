@@ -408,9 +408,4 @@
             <Tangent side="left" abscissaParam="-6" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
-    <Labels fps="25" editor:groupName="Labels">
-        <Label frame="0">start breath break</Label>
-        <Label frame="40">put hands on stomach</Label>
-        <Label frame="658">finished breath break</Label>
-    </Labels>
 </Animation>

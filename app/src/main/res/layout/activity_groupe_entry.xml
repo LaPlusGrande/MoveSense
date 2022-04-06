@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GroupEntry">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupeEntry">
 
     <Button
         android:id="@+id/button_hard_animation"
@@ -54,5 +54,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
         style="@style/MyBackButton"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

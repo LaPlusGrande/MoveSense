@@ -793,20 +793,4 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
-    <Labels fps="25" editor:groupName="Labels">
-        <Label frame="0">start follow arms</Label>
-        <Label frame="1">body straigt, arms forward, head straight</Label>
-        <Label frame="60">body straight, arms up, head up</Label>
-        <Label frame="120">arms forward, head straight</Label>
-        <Label frame="180">body forward, arms down, head down</Label>
-        <Label frame="240">body straight, arms forward, head straight</Label>
-        <Label frame="300">body straight, arms up, head up</Label>
-        <Label frame="360">body straight, arms forward, head straight</Label>
-        <Label frame="420">body forward, arms down, head down</Label>
-        <Label frame="480">body straight, arms forward, head straight</Label>
-        <Label frame="541">body straight, arms up, head up</Label>
-        <Label frame="600">body straight, arms forward, head straight</Label>
-        <Label frame="660">body straight, arms down, head straight</Label>
-        <Label frame="665">finished follow arms</Label>
-    </Labels>
 </Animation>

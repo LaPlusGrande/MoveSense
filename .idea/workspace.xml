@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6107246-6526-4db7-8efd-fff82daf000b" name="Default Changelist" comment="" />
+    <list default="true" id="f6107246-6526-4db7-8efd-fff82daf000b" name="Default Changelist" comment="Updated .gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Exercise.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/GroupEntry.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/HttpClient.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Login.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Perform.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/Welcome.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperAnimation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/fhkiel/srcms/apps/therapy/physical/p/workout/actions/PepperSay.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_demo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_groupe_entry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_groupe_entry.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_perform.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/airboxing.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/airboxing.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/apple_picking.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/apple_picking.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/arm_rotation.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/arm_rotation.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/arm_side.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/arm_side.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/bend_body.qianim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/breath_break.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/breath_break.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/clapping.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/clapping.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/combine_elbow_hand.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/combine_elbow_hand.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/elbowstretch.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/elbowstretch.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/follow_arm.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/follow_arm.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/lift_arms.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/lift_arms.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/openhand.qianim" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/openhand.qianim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +85,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="27QGADoDUnQnYlOO1bXjSfCJ3wN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -52,7 +96,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="project.structure.last.edited" value="Build Variants" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -131,7 +181,35 @@
       <option name="project" value="LOCAL" />
       <updated>1649244852562</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated">
+      <created>1649245504010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649245504010</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated .gitignore to add all local files">
+      <created>1649245612634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649245612634</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added local files">
+      <created>1649245623015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649245623015</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated .gitignore">
+      <created>1649245721301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649245721301</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +227,10 @@
   <component name="VcsManagerConfiguration">
     <option name="RELOAD_CONTEXT" value="false" />
     <MESSAGE value="Updated project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated project setup" />
+    <MESSAGE value="Updated" />
+    <MESSAGE value="Updated .gitignore to add all local files" />
+    <MESSAGE value="Added local files" />
+    <MESSAGE value="Updated .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore" />
   </component>
 </project>
