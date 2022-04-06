@@ -1023,4 +1023,27 @@
             <Tangent side="left" abscissaParam="-10" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
+    <Labels fps="25" editor:groupName="Labels">
+        <Label frame="0">start clapping</Label>
+        <Label frame="30">hands appart </Label>
+        <Label frame="60">hands together</Label>
+        <Label frame="90">hands appart</Label>
+        <Label frame="120">hands together</Label>
+        <Label frame="150">hands appart</Label>
+        <Label frame="180">hands together</Label>
+        <Label frame="210">hands apart</Label>
+        <Label frame="240">hands together</Label>
+        <Label frame="270">hands appart</Label>
+        <Label frame="300">hands together</Label>
+        <Label frame="330">hands appart</Label>
+        <Label frame="360">hands together</Label>
+        <Label frame="390">hands appart</Label>
+        <Label frame="420">hands together</Label>
+        <Label frame="450">hands appart</Label>
+        <Label frame="480">hands together</Label>
+        <Label frame="510">hands appart</Label>
+        <Label frame="540">hands together</Label>
+        <Label frame="570">hands appart</Label>
+        <Label frame="600">finished clapping</Label>
+    </Labels>
 </Animation>

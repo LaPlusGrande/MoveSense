@@ -3,6 +3,8 @@ package de.fhkiel.srcms.apps.therapy.physical.p.workout
 import android.util.Log
 import com.aldebaran.qi.sdk.QiContext
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAction
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAction.resetPepper
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAction.waitForSay
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperSay
 
@@ -112,7 +114,7 @@ class Exercise : PepperAction(){
                             waitForSay()
                             mySay.doSay(qiContext,"\\rspd=80\\ bewegt lediglich euren oberkörper von der einen zur anderen Seite \\pau=200\\" +
                                         "\\rspd=80\\ und versucht dabei möglichst nicht vom Stuhl zu fallen \\pau=200\\ wir bewegen uns hin und her \\pau=200\\ hin und her")
-                            myAnimation.doTendBody(qiContext)
+                            myAnimation.doBendBody(qiContext)
                             myAnimation.doRotation(qiContext)
                         }
                         12 -> {
@@ -123,7 +125,7 @@ class Exercise : PepperAction(){
                             myAnimation.doRotation(qiContext)
                         }
                     }
-//                    waitForAction()
+//                   waitForAction()
                 }
             }
         }catch (e : Exception){

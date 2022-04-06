@@ -12,7 +12,7 @@ import com.aldebaran.qi.sdk.`object`.conversation.Say
 import com.aldebaran.qi.sdk.builder.SayBuilder
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 import com.bumptech.glide.Glide
-import de.fhkiel.srcms.apps.therapy.physical.R
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R
 
 class Perform : RobotActivity(), RobotLifecycleCallbacks {
 

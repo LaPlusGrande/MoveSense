@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import de.fhkiel.srcms.apps.therapy.physical.R
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
