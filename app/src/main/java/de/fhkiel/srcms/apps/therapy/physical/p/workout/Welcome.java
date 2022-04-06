@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
-import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
 public class Welcome extends RobotActivity {
 
@@ -26,7 +25,7 @@ public class Welcome extends RobotActivity {
         groupe_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent groupeIntent = new Intent(Welcome.this, GroupeEntry.class);
+                Intent groupeIntent = new Intent(Welcome.this, GroupEntry.class);
                 startActivity(groupeIntent);
             }
         });

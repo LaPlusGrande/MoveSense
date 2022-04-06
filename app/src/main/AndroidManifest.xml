@@ -34,7 +34,7 @@
             android:exported="true" />
         <activity android:name=".Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
         <!-- <activity android:name=".OpenHand" /> -->
-        <activity android:name=".GroupeEntry" />
+        <activity android:name=".GroupEntry" />
         <activity android:name=".Welcome"
             android:exported="true">
             <intent-filter>
