@@ -1,10 +1,7 @@
 package de.fhkiel.srcms.apps.therapy.physical.p.workout
 
 import android.content.Intent
-import android.content.IntentFilter
-import android.os.BatteryManager
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -21,7 +18,7 @@ class Welcome : AppCompatActivity() {
 //        val individual_Btn = findViewById<Button>(R.id.idBtnIndividual)
 
         groupe_Btn.setOnClickListener{
-            Intent(this, GroupeEntry::class.java).also {
+            Intent(this, GroupEntry::class.java).also {
                 startActivity(it)
             }
         }

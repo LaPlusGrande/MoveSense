@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import de.fhkiel.srcms.apps.therapy.physical.p.workout.R
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +24,7 @@ class Login : AppCompatActivity() {
             if(loginName.isEmpty()&& password.isEmpty()){
                 var toast = Toast.makeText(this,"Bitte alle Felder ausfüllen",Toast.LENGTH_SHORT)
             }else if (loginName == "name" && password == "0000"){
-                Intent(this, GroupeEntry:: class.java).also {
+                Intent(this, GroupEntry:: class.java).also {
                     startActivity(it)
                 }
             }

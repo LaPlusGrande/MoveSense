@@ -17,12 +17,12 @@ import com.aldebaran.qi.sdk.`object`.human.*
 import com.aldebaran.qi.sdk.`object`.humanawareness.HumanAwareness
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 
-class GroupeEntry : RobotActivity(), RobotLifecycleCallbacks {
+class GroupEntry : RobotActivity(), RobotLifecycleCallbacks {
 
     private lateinit var hard_btn : Button
     private lateinit var easy_btn : Button
 
-    private var TAG = GroupeEntry::class.java
+    private var TAG = GroupEntry::class.java
 
     private var humanAwareness: HumanAwareness? = null
     private var qiContext: QiContext? = null
