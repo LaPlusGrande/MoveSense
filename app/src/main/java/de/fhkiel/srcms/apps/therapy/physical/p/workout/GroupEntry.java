@@ -25,7 +25,7 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
         // Register the RobotLifecycleCallbacks for this Activity.
         QiSDK.register(this, this);
 
-        setContentView(R.layout.activity_groupe_entry);
+        setContentView(R.layout.activity_group_entry);
 
         hard_button = (Button) findViewById(R.id.button_hard_animation);
         easy_button = (Button) findViewById(R.id.button_easy_animation);
