@@ -5,7 +5,6 @@
     android:installLocation="preferExternal">
 
     <uses-feature android:name="com.softbank.hardware.pepper" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -17,18 +16,20 @@
         android:theme="@style/Theme.PhysioWorkoutLight">
 
         <activity
-            android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Perform"
+            android:name=".Perform"
             android:exported="true"
             tools:ignore="MissingClass" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupEntry" />
-        <activity android:name="de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome"
+
+        <activity android:name=".GroupEntry" />
+
+        <activity android:name=".Welcome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
