@@ -56,39 +56,89 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
         if (extrasActivity== null){
             Log.d(TAG,"an error occured");
         } else {
+            int iterationDemo = 1;
             String performMethod = extrasActivity.getString("keyPerform");
-            if (performMethod.equals("valueHardPerform")){
-                int[] arrayHard = {10,7,6,1,4,9,8,2,5,12,0};
-                int iteration = 2;
 
-                Say intro = SayBuilder.with(qiContext)
-                    .withText("\\rspd=80\\ schön euch zu sehen \\pau=500\\ lasst uns ein paar schwere Übungen machen")
-                    .build();
-                intro.run();
-                Exercise.doExercise(qiContext, arrayHard, iteration);
+            switch(performMethod){
+                case "valueHardPerform":
+                    int[] arrayHard = {10,7,6,1,4,9,8,2,5,12,0};
+                    int iterationHard = 2;
+
+                    Say introHard = SayBuilder.with(qiContext)
+                            .withText("\\rspd=80\\ schön euch zu sehen \\pau=500\\ lasst uns ein paar schwere Übungen machen")
+                            .build();
+                    introHard.run();
+                    Exercise.doExercise(qiContext, arrayHard, iterationHard);
+                    break;
+
+                case "valueEasyPerform":
+                    int[] arrayEasy = {10,7,6,5,11,3,12,0};
+                    int iterationEasy=2;
+
+                    Say introEasy = SayBuilder.with(qiContext)
+                            .withText("\\rspd=80\\ schön dass ihr da seid \\pau=500\\ lasst uns ein paar einfache Übungen machen")
+                            .build();
+                    introEasy.run();
+                    Exercise.doExercise(qiContext, arrayEasy, iterationEasy);
+                    break;
+
+                // Start Demo-Version
+                case "demoApplepicking":
+                    int [] arrayApple = {1};
+                    Exercise.doExercise(qiContext, arrayApple, iterationDemo);
+                    break;
+                case "demoArmRotation":
+                    int [] arrayArmRotation = {2};
+                    Exercise.doExercise(qiContext, arrayArmRotation, iterationDemo);
+                    break;
+                case "demoArmSide":
+                    int [] arrayArmSide = {3};
+                    Exercise.doExercise(qiContext, arrayArmSide, iterationDemo);
+                    break;
+                case "demoBoxing":
+                    int [] arrayBoxing = {4};
+                    Exercise.doExercise(qiContext, arrayBoxing, iterationDemo);
+                    break;
+                case "demoClapping":
+                    int [] arrayClapping = {5};
+                    Exercise.doExercise(qiContext, arrayClapping, iterationDemo);
+                    break;
+                case "demoElbowhand":
+                    int [] arrayElbowhand = {6};
+                    Exercise.doExercise(qiContext, arrayElbowhand, iterationDemo);
+                    break;
+                case "demoElbowstretch":
+                    int [] arrayElbowStretch = {7};
+                    Exercise.doExercise(qiContext, arrayElbowStretch, iterationDemo);
+                    break;
+                case "demoFollowArms":
+                    int [] arrayFollowArms = {8};
+                    Exercise.doExercise(qiContext, arrayFollowArms, iterationDemo);
+                    break;
+                case "demoLiftArms":
+                    int [] arrayLiftArms = {9};
+                    Exercise.doExercise(qiContext, arrayLiftArms, iterationDemo);
+                    break;
+                case "demoOpenhand":
+                    int [] arrayOpenhand = {10};
+                    Exercise.doExercise(qiContext, arrayOpenhand, iterationDemo);
+                    break;
+                case "demoBendBody":
+                    int [] arrayBendBody = {11};
+                    Exercise.doExercise(qiContext, arrayBendBody, iterationDemo);
+                    break;
             }
-            if (performMethod.equals("valueEasyPerform")){
-
-                int[] arrayEasy = {10,7,6,5,11,3,12,0};
-                int iteration=2;
-
-                Say intro = SayBuilder.with(qiContext)
-                        .withText("\\rspd=80\\ schön dass ihr da seid \\pau=500\\ lasst uns ein paar einfache Übungen machen")
-                        .build();
-                intro.run();
-                Exercise.doExercise(qiContext, arrayEasy, iteration);
-            }
-            if (performMethod.equals("valueIndividual")){
-                int iteration = UpdateUser.iter;
-                int [] array = UpdateUser.array;
-                String name = UpdateUser.userName;
-
-                Say intro = SayBuilder.with(qiContext)
-                        .withText("\\rspd=80\\ schön dass du mit mir ein paar Übungen machen möchtest.")
-                        .build();
-                intro.run();
-                Exercise.doExercise(qiContext, array, iteration);
-            }
+//            if (performMethod.equals("valueIndividual")){
+//                int iteration = UpdateUser.iter;
+//                int [] array = UpdateUser.array;
+//                String name = UpdateUser.userName;
+//
+//                Say intro = SayBuilder.with(qiContext)
+//                        .withText("\\rspd=80\\ schön dass du mit mir ein paar Übungen machen möchtest.")
+//                        .build();
+//                intro.run();
+//                Exercise.doExercise(qiContext, array, iteration);
+//            }
         }
     }
 

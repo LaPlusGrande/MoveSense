@@ -17,21 +17,9 @@ import de.fhkiel.srcms.apps.therapy.physical.p.workout.database.AddUser;
 public class Demo extends RobotActivity implements RobotLifecycleCallbacks {
 
     private static final String TAG = Demo.class.getName();
-    private QiContext qiContext;
 
-    private Button back_button;
+    private Button back_button,Applepicking_button,ArmRotation_button,Armside_button,Boxing_button,Clapping_button, ElbowHand_button, ElbowStretch_button, FollowArms_button, LiftArms_button,OpenHand_button, BendBody_button;
 
-    public Button Applepicking_button;
-    public Button ArmRotation_button;
-    public Button Armside_button;
-    public Button Boxing_button;
-    public Button Clapping_button;
-    public Button ElbowHand_button;
-    public Button ElbowStretch_button;
-    public Button FollowArms_button;
-    public Button LiftArms_button;
-    public Button OpenHand_button;
-    public Button TendBody_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +28,23 @@ public class Demo extends RobotActivity implements RobotLifecycleCallbacks {
         QiSDK.register(this, this);
         Log.d(TAG,"start class");
 
-        back_button = (Button) findViewById(R.id.back_button2);
-        Applepicking_button = (Button) findViewById(R.id.demo_applePicking);
-        ArmRotation_button = (Button) findViewById(R.id.demo_armRotation);
-        Armside_button = (Button) findViewById(R.id.demo_armSide);
-        Boxing_button = (Button) findViewById(R.id.demo_airBoxing);
-        Clapping_button = (Button) findViewById(R.id.demo_clappingHands);
-        ElbowHand_button = (Button) findViewById(R.id.demo_ellbowHand);
-        ElbowStretch_button = (Button) findViewById(R.id.demo_elbowStretch);
-        FollowArms_button = (Button) findViewById(R.id.demo_followArms);
-        LiftArms_button = (Button) findViewById(R.id.demo_liftArms);
-        OpenHand_button = (Button) findViewById(R.id.demo_openHand);
-        TendBody_button = (Button) findViewById(R.id.demo_tendBody);
+        back_button = findViewById(R.id.back_button2);
+        Applepicking_button = findViewById(R.id.demo_applePicking);
+        ArmRotation_button = findViewById(R.id.demo_armRotation);
+        Armside_button = findViewById(R.id.demo_armSide);
+        Boxing_button = findViewById(R.id.demo_airBoxing);
+        Clapping_button = findViewById(R.id.demo_clappingHands);
+        ElbowHand_button = findViewById(R.id.demo_ellbowHand);
+        ElbowStretch_button = findViewById(R.id.demo_elbowStretch);
+        FollowArms_button = findViewById(R.id.demo_followArms);
+        LiftArms_button = findViewById(R.id.demo_liftArms);
+        OpenHand_button = findViewById(R.id.demo_openHand);
+        BendBody_button = findViewById(R.id.demo_tendBody);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent startIntent = new Intent(Demo.this, AddUser.class);
+                Intent startIntent = new Intent(Demo.this, Welcome.class);
                 startActivity(startIntent);
             }
         });
@@ -71,93 +59,91 @@ public class Demo extends RobotActivity implements RobotLifecycleCallbacks {
     @Override
     public void onRobotFocusGained(QiContext qiContext) {
 
-        this.qiContext = qiContext;
-
         Applepicking_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                performIntent.putExtra("keyDemo", "valueApplepicking");
+                Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                performIntent.putExtra("keyPerform", "demoApplepicking");
                 startActivity(performIntent);
                 }
             });
         ArmRotation_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                performIntent.putExtra("keyDemo", "valueArmRotation");
+                Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                performIntent.putExtra("keyPerform", "demoArmRotation");
                 startActivity(performIntent);
             }
         });
         Armside_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                performIntent.putExtra("keyDemo", "valueArmSide");
+                Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                performIntent.putExtra("keyPerform", "demoArmSide");
                 startActivity(performIntent);
             }
         });
         Boxing_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                performIntent.putExtra("keyDemo", "valueBoxing");
+                Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                performIntent.putExtra("keyPerform", "demoBoxing");
                 startActivity(performIntent);
                 }
             });
             Clapping_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueClapping");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoClapping");
                     startActivity(performIntent);
                 }
             });
             ElbowHand_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueElbowhand");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoElbowhand");
                     startActivity(performIntent);
                 }
             });
             ElbowStretch_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueElbowstretch");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoElbowstretch");
                     startActivity(performIntent);
                 }
             });
             FollowArms_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueFollowArms");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoFollowArms");
                     startActivity(performIntent);
                 }
             });
             LiftArms_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueLiftArms");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoLiftArms");
                     startActivity(performIntent);
                 }
             });
             OpenHand_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueOpenhand");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoOpenhand");
                     startActivity(performIntent);
                 }
             });
-            TendBody_button.setOnClickListener(new View.OnClickListener() {
+            BendBody_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent performIntent = new Intent(Demo.this, PerformDemo.class);
-                    performIntent.putExtra("keyDemo", "valueTendBody");
+                    Intent performIntent = new Intent(Demo.this, PerformActivity.class);
+                    performIntent.putExtra("keyPerform", "demoBendBody");
                     startActivity(performIntent);
                 }
             });

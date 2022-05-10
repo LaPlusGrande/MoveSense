@@ -27,9 +27,6 @@
             android:name=".Individual"
             android:exported="false" />
         <activity
-            android:name=".PerformDemo"
-            android:exported="true" />
-        <activity
             android:name=".PerformActivity"
             android:exported="true" />
         <activity android:name=".Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->

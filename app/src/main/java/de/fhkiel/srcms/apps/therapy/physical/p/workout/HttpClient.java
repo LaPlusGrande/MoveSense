@@ -81,7 +81,7 @@ public class HttpClient extends Thread {
             connection = url.openConnection();
             connection.setDoOutput(true);
 
-            String test = "{'key': 'u/7NGEs,y#!,:sUV%I*X6%Jt-AJOl;0FFJ=QF*m:KFO6gaKsQt{b.;DSy4p87<Mg','data':'"+ new DataLog().toString()+"'}";
+            String test = "{'key': '}rW%NX@KdmAadzS2sQ/<JMT0X1&WK@ruhxivPB8v:bV,e{iF>YR>s?Tpz<oaHr2W','data':'"+ new DataLog().toString()+"'}";
 //            String test = "{'key': 'hn<K/Z&L=YB03}gLiufe)(!9;YIm2%6h?4DPd=3ZLe1E8x??BbAJ0md#u4v=48:2','data':'test test test'}";
 
             connection.setRequestProperty("Content-Type", "text/plain");
