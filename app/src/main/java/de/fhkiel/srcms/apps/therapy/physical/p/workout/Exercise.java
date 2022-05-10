@@ -123,7 +123,7 @@ public class Exercise extends PepperAction {
                         waitForSay();
                         PepperSay.doSay(qiContext,"\\rspd=80\\ wir öffnen unsrere Hände und schließen sie mit aller Kraft \\pau=200\\"+
                                 "\\rspd=80\\und wieder öffnen und schließen \\pau=200\\ öffnen und, schließen");
-                        PepperAnimation.doOpenHand(qiContext);
+                        new PepperAnimation().doOpenHand(qiContext);
                         PepperAnimation.doRotation(qiContext);
                         break;
                     case 11:
@@ -132,7 +132,7 @@ public class Exercise extends PepperAction {
                         waitForSay();
                         PepperSay.doSay(qiContext,"\\rspd=80\\ bewegt lediglich euren oberkörper von der einen zur anderen Seite \\pau=200\\"+
                                 "\\rspd=80\\ und versucht dabei möglichst nicht vom Stuhl zu fallen \\pau=200\\ wir bewegen uns hin und her \\pau=200\\ hin und her");
-                        PepperAnimation.doTendBody(qiContext);
+                        PepperAnimation.doBendBody(qiContext);
                         PepperAnimation.doRotation(qiContext);
                         break;
                     case 12:
