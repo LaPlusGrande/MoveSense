@@ -544,5 +544,18 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
-    <Labels fps="25" editor:groupName="Labels"/>
+    <Labels fps="25" editor:groupName="Labels">
+        <Label frame="0">start elbowstretch</Label>
+        <Label frame="60">arms bend</Label>
+        <Label frame="120">arms down</Label>
+        <Label frame="180">arms bend</Label>
+        <Label frame="240">arms down</Label>
+        <Label frame="300">arms bend</Label>
+        <Label frame="360">arms down</Label>
+        <Label frame="420">arms bend</Label>
+        <Label frame="480">arms down</Label>
+        <Label frame="540">arms bend</Label>
+        <Label frame="600">arms down</Label>
+        <Label frame="602">finished elbowstretch</Label>
+    </Labels>
 </Animation>

@@ -1,5 +1,7 @@
 package de.fhkiel.srcms.apps.therapy.physical.p.workout.actions;
 
+import android.util.Log;
+
 import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.builder.AnimateBuilder;
 import com.aldebaran.qi.sdk.builder.AnimationBuilder;
@@ -9,12 +11,15 @@ import com.aldebaran.qi.sdk.object.actuation.Animation;
 import java.util.concurrent.ExecutionException;
 
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.DataLog;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.HttpClient;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome;
 
 public class PepperAnimation extends PepperAction {
 
     private static String TAG = PepperAnimation.class.getName();
     public Animate animate;
+    public DataLog dataLog = new DataLog();
 
     public static void doApplePicking (QiContext qiContext) throws ExecutionException, InterruptedException {
 
@@ -190,17 +195,16 @@ public class PepperAnimation extends PepperAction {
                 .withResources(R.raw.openhand)
                 .build();
 
-        animate = AnimateBuilder.with(qiContext)
+        Animate animate = AnimateBuilder.with(qiContext)
                 .withAnimation(myOpenhand)
                 .build();
 
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            while (label != "finished") {
-                new DataLog().animation(label, time);
-            }
+            dataLog.animation(label, time);
         });
+
     }
 
     public static void doBendBody(QiContext qiContext) throws ExecutionException, InterruptedException {

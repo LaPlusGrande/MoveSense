@@ -529,4 +529,19 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
+    <Labels fps="25" editor:groupName="Labels">
+        <Label frame="0">start elbow hand</Label>
+        <Label frame="60">arms down, hands open</Label>
+        <Label frame="120">arms bend, hands close</Label>
+        <Label frame="180">arms down, hands open</Label>
+        <Label frame="240">arms bend, hands close</Label>
+        <Label frame="300">arms down, hands open</Label>
+        <Label frame="360">arms bend, hands close</Label>
+        <Label frame="420">arms down, hands open</Label>
+        <Label frame="480">arms bend, hands close</Label>
+        <Label frame="540">arms down, hands open</Label>
+        <Label frame="600">arms bend, hands close</Label>
+        <Label frame="660">arms down, hands open</Label>
+        <Label frame="662">finished elbow hand</Label>
+    </Labels>
 </Animation>

@@ -22,6 +22,7 @@ public class HttpClient extends Thread {
 
 
     private static String TAG = HttpClient.class.getName();
+    private PepperAnimation pepperAnimation = new PepperAnimation();
 
     public HttpClient(){
         super("HttpClient");
@@ -34,6 +35,7 @@ public class HttpClient extends Thread {
 //            e.printStackTrace();
 //        }
         try {
+            System.out.println("inside thread");
                 dataPost();
         } catch (IOException e) {
             e.printStackTrace();
@@ -72,7 +74,7 @@ public class HttpClient extends Thread {
 //        }
 //    }
 
-    public static void dataPost() throws IOException {
+    public void dataPost() throws IOException {
 
         URLConnection connection =null;
         try {
@@ -81,7 +83,7 @@ public class HttpClient extends Thread {
             connection = url.openConnection();
             connection.setDoOutput(true);
 
-            String test = "{'key': '}rW%NX@KdmAadzS2sQ/<JMT0X1&WK@ruhxivPB8v:bV,e{iF>YR>s?Tpz<oaHr2W','data':'"+ new DataLog().toString()+"'}";
+            String test = "{'key': 'wgGzBZ4JwhdL7<p1NPyM4kyPBQC#z}U4Y<@Eg3-YzdZl.*tI5-FWBi9<Sm%emeK-','data':'"+pepperAnimation.dataLog.toString() +"'}";
 //            String test = "{'key': 'hn<K/Z&L=YB03}gLiufe)(!9;YIm2%6h?4DPd=3ZLe1E8x??BbAJ0md#u4v=48:2','data':'test test test'}";
 
             connection.setRequestProperty("Content-Type", "text/plain");

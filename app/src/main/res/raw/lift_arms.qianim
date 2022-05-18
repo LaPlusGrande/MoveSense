@@ -797,4 +797,19 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
+    <Labels fps="25" editor:groupName="Labels">
+        <Label frame="0">start lift arms</Label>
+        <Label frame="60">body straight, arms up</Label>
+        <Label frame="120">body straight, arms forward</Label>
+        <Label frame="180">body down, arms down</Label>
+        <Label frame="240">body straight, arms forwards</Label>
+        <Label frame="300">body straight, arms up</Label>
+        <Label frame="360">body straight, arms forward</Label>
+        <Label frame="420">body down, arms down</Label>
+        <Label frame="480">body straight, arms forward</Label>
+        <Label frame="540">body straight, arms up</Label>
+        <Label frame="600">body straight, arms forward</Label>
+        <Label frame="660">body straight, arms down</Label>
+        <Label frame="663">finished lift arms</Label>
+    </Labels>
 </Animation>

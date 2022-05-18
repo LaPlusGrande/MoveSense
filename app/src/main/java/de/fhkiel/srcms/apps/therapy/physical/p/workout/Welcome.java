@@ -1,5 +1,7 @@
 package de.fhkiel.srcms.apps.therapy.physical.p.workout;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +10,8 @@ import android.widget.Button;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
 
 public class Welcome extends RobotActivity {
+
+//    public static Thread runPost = new HttpClient();
 
     private static final String TAG = Welcome.class.getName();
 
@@ -46,8 +50,6 @@ public class Welcome extends RobotActivity {
 //                startActivity(individualIntent);
 //            }
 //        });
-        Thread runPost = new HttpClient();
-        runPost.start();
 
     }
 

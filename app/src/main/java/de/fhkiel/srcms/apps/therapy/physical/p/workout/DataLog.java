@@ -23,6 +23,7 @@ public class DataLog {
 
         this.label = label;
         this.time = time;
+
     }
 
 //    public void logHuman(Integer i, Integer age, Enum gender, Enum pleasureState, Enum excitementState, Enum engagementIntentionState, Enum smileState, Enum attentionState, double distance) {

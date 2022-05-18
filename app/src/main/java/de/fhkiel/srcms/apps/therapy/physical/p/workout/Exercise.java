@@ -32,6 +32,8 @@ public class Exercise extends PepperAction {
                         count1 = array.length;
                         if (setback == iteration) {
                             PepperSay.doSay(qiContext, "\\rspd=80\\ das hat Spaß gemacht ich hoffe wir sehen und bald wieder");
+//                            Thread runPost = new HttpClient();
+//                            runPost.start();
                         }
                         else {setback++;}
                     Log.d(TAG,"executed > outro");
