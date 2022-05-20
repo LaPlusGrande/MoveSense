@@ -9,9 +9,11 @@ import android.widget.Button;
 
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
 
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation;
+
 public class Welcome extends RobotActivity {
 
-//    public static Thread runPost = new HttpClient();
+    public static Thread runPost = new HttpClient();
 
     private static final String TAG = Welcome.class.getName();
 
@@ -51,6 +53,7 @@ public class Welcome extends RobotActivity {
 //            }
 //        });
 
+        runPost.start();
     }
 
 }

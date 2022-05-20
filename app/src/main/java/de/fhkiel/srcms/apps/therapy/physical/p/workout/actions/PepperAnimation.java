@@ -195,7 +195,7 @@ public class PepperAnimation extends PepperAction {
                 .withResources(R.raw.openhand)
                 .build();
 
-        Animate animate = AnimateBuilder.with(qiContext)
+        animate = AnimateBuilder.with(qiContext)
                 .withAnimation(myOpenhand)
                 .build();
 
