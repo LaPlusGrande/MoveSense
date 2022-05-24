@@ -14,7 +14,6 @@ import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 public class PepperAnimation extends PepperAction {
 
     private static String TAG = PepperAnimation.class.getName();
-    public Animate animate;
 
     public static void doApplePicking (QiContext qiContext) throws ExecutionException, InterruptedException {
 
@@ -185,21 +184,19 @@ public class PepperAnimation extends PepperAction {
         });
     }
 
-    public void doOpenHand (QiContext qiContext) throws ExecutionException, InterruptedException {
+    public static void doOpenHand (QiContext qiContext) throws ExecutionException, InterruptedException {
         Animation myOpenhand = AnimationBuilder.with(qiContext)
                 .withResources(R.raw.openhand)
                 .build();
 
-        animate = AnimateBuilder.with(qiContext)
+        Animate animate = AnimateBuilder.with(qiContext)
                 .withAnimation(myOpenhand)
                 .build();
 
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            while (label != "finished") {
                 new DataLog().animation(label, time);
-            }
         });
     }
 

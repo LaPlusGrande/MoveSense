@@ -640,4 +640,20 @@
             <Tangent side="left" abscissaParam="-20" ordinateParam="0" editor:interpType="bezier_auto"/>
         </Key>
     </ActuatorCurve>
+    <Labels fps="25" editor:groupName="Labels">
+        <Label frame="0">start arm rotation</Label>
+        <Label frame="60">arms down</Label>
+        <Label frame="120">arms forward</Label>
+        <Label frame="180">arms up</Label>
+        <Label frame="240">arms straight side</Label>
+        <Label frame="300">arms down</Label>
+        <Label frame="360">arms forward</Label>
+        <Label frame="420">arms up</Label>
+        <Label frame="480">arms straight side</Label>
+        <Label frame="540">arms down</Label>
+        <Label frame="600">arms forward</Label>
+        <Label frame="660">arms up</Label>
+        <Label frame="720">arms straight side</Label>
+        <Label frame="730">finished arm rotation</Label>
+    </Labels>
 </Animation>

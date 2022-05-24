@@ -21,7 +21,6 @@ public class Welcome extends RobotActivity {
 
         groupe_button = (Button) findViewById(R.id.btn_groupe);
         demo_button = (Button) findViewById(R.id.btn_demo);
-//        individual_button = (Button) findViewById(R.id.btn_individual);
 
         groupe_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +38,6 @@ public class Welcome extends RobotActivity {
             }
         });
 
-//        individual_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent individualIntent = new Intent(Welcome.this,Individual.class);
-//                startActivity(individualIntent);
-//            }
-//        });
         Thread runPost = new HttpClient();
         runPost.start();
 
