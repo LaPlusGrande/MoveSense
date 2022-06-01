@@ -18,15 +18,15 @@ import java.net.URLConnection;
 
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation;
 
-public class HttpClient extends Thread {
-
+public class HttpClient //extends Thread {
+{
 
     private static String TAG = HttpClient.class.getName();
     private PepperAnimation pepperAnimation = new PepperAnimation();
 
-    public HttpClient(){
+    /*public HttpClient(){
         super("HttpClient");
-    }
+    }*/
 
     public void run(){
 //        try {
@@ -34,12 +34,12 @@ public class HttpClient extends Thread {
 //        } catch (MalformedURLException e) {
 //            e.printStackTrace();
 //        }
-        try {
+        /*try {
             System.out.println("inside thread");
-                dataPost();
+                //dataPost();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
 //    public void dataGet() throws MalformedURLException {
@@ -74,16 +74,17 @@ public class HttpClient extends Thread {
 //        }
 //    }
 
-    public void dataPost() throws IOException {
+    public void dataPost(String text) throws IOException {
 
         URLConnection connection =null;
         try {
-            URL url = new URL("http://10.0.2.2:5837/app/Physio-Workout/log/app");
+//            URL url = new URL("http://10.0.2.2:5837/app/Physio-Workout/log/app");
+            URL url = new URL("http://192.168.178.122:5837/app/Physio-Workout/log/app");
 //            URL url = new URL("http://localhost:5837/app/Physio-Workout/log/app");
             connection = url.openConnection();
             connection.setDoOutput(true);
 
-            String test = "{'key': 'wgGzBZ4JwhdL7<p1NPyM4kyPBQC#z}U4Y<@Eg3-YzdZl.*tI5-FWBi9<Sm%emeK-','data':'"+pepperAnimation.dataLog.toString() +"'}";
+            String test = "{'key': '{O#VHNw:az>XEYglOEri#*!YY/+8_0=(PB8Fs0{YdJa2EkzoLVTCc<)0m!_7Wop,','data':'"+ text +"'}";
 //            String test = "{'key': 'hn<K/Z&L=YB03}gLiufe)(!9;YIm2%6h?4DPd=3ZLe1E8x??BbAJ0md#u4v=48:2','data':'test test test'}";
 
             connection.setRequestProperty("Content-Type", "text/plain");

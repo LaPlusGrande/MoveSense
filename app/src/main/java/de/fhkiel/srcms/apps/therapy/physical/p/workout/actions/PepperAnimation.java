@@ -8,6 +8,7 @@ import com.aldebaran.qi.sdk.builder.AnimationBuilder;
 import com.aldebaran.qi.sdk.object.actuation.Animate;
 import com.aldebaran.qi.sdk.object.actuation.Animation;
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.DataLog;
@@ -35,6 +36,15 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label,time);
+
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -212,6 +222,15 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
+
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
 
