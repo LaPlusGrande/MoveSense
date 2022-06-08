@@ -2,13 +2,31 @@ package de.fhkiel.srcms.apps.therapy.physical.p.workout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.aldebaran.qi.Future;
 import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
+import com.aldebaran.qi.sdk.object.actuation.Actuation;
+import com.aldebaran.qi.sdk.object.actuation.Frame;
+import com.aldebaran.qi.sdk.object.geometry.Transform;
+import com.aldebaran.qi.sdk.object.geometry.TransformTime;
+import com.aldebaran.qi.sdk.object.geometry.Vector3;
+import com.aldebaran.qi.sdk.object.human.AttentionState;
+import com.aldebaran.qi.sdk.object.human.EngagementIntentionState;
+import com.aldebaran.qi.sdk.object.human.ExcitementState;
+import com.aldebaran.qi.sdk.object.human.Gender;
+import com.aldebaran.qi.sdk.object.human.Human;
+import com.aldebaran.qi.sdk.object.human.PleasureState;
+import com.aldebaran.qi.sdk.object.human.SmileState;
+import com.aldebaran.qi.sdk.object.humanawareness.HumanAwareness;
+
+import java.io.IOException;
+import java.util.List;
 
 public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks {
 
@@ -17,6 +35,9 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
     public Button hard_button;
     public Button easy_button;
     public Button back_button;
+    private static HumanAwareness humanAwareness;
+    private static QiContext qiContext;
+    public DataLog dataLog = new DataLog();
 
     
     @Override
@@ -43,6 +64,10 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
     @Override
     public void onRobotFocusGained(QiContext qiContext) {
 
+        GroupEntry.qiContext = qiContext;
+        humanAwareness = qiContext.getHumanAwareness();
+        findHumansAround();
+
         hard_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +87,61 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
             }
         });
     }
+    public void findHumansAround() {
+        // Get the humans around the robot.
+        Future<List<Human>> humansAroundFuture = humanAwareness.async().getHumansAround();
+        humansAroundFuture.andThenConsume(humansAround -> Log.i(TAG, humansAround.size() + " human(s) around."));
+
+        // Retrieving characteristics
+        humansAroundFuture.andThenConsume(humansAround -> {
+            Log.i(TAG, humansAround.size() + " human(s) around.");
+            retrieveCharacteristics(humansAround);
+        });
+    }
+
+    public void retrieveCharacteristics(final List<Human> humans) {
+        Actuation actuation = qiContext.getActuation();
+        Frame robotFrame = actuation.robotFrame();
+
+        for (int i = 0; i < humans.size(); i++) {
+            // Get the human.
+            Human human = humans.get(i);
+            Frame humanFrame = human.getHeadFrame();
+            // Compute the distance.
+            double distance = computeDistance(humanFrame, robotFrame);
+            PleasureState pleasureState = human.getEmotion().getPleasure();
+            ExcitementState excitementState = human.getEmotion().getExcitement();
+            EngagementIntentionState engagementIntentionState = human.getEngagementIntention();
+            SmileState smileState = human.getFacialExpressions().getSmile();
+            AttentionState attentionState = human.getAttention();
+            dataLog.logHuman(i, pleasureState,excitementState, engagementIntentionState, smileState, attentionState, distance);
+
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+    }
+    public static double computeDistance(Frame humanFrame, Frame robotFrame) {
+        // Here we will compute the distance between the human and the robot.
+        // Get the TransformTime between the human frame and the robot frame.
+        TransformTime transformTime = humanFrame.computeTransform(robotFrame);
+        // Get the transform.
+        Transform transform = transformTime.getTransform();
+        // Get the translation.
+        Vector3 translation = transform.getTranslation();
+        // Get the x and y components of the translation.
+        double x = translation.getX();
+        double y = translation.getY();
+        double z = translation.getZ();
+
+        // Compute the distance and return it.
+        return Math.sqrt(x * x + y * y);
+    }
         @Override
     protected void onDestroy() {
         // Unregister the RobotLifecycleCallbacks for this Activity.
@@ -78,6 +158,7 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
     public void onRobotFocusRefused(String reason) {
 
     }
+
 }
 
 

@@ -59,8 +59,8 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
 
             switch(performMethod){
                 case "valueHardPerform":
-//                    int[] arrayHard = {10,7,6,1,4,9,8,2,5,12,0};
-                    int[] arrayHard = {10,0};
+                    int[] arrayHard = {10,7,6,1,4,9,8,2,5,12,0};
+//                    int[] arrayHard = {10,0};
                     int iterationHard = 1;
 
                     Say introHard = SayBuilder.with(qiContext)
@@ -127,17 +127,6 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
                     Exercise.doExercise(qiContext, arrayBendBody, iterationDemo);
                     break;
             }
-//            if (performMethod.equals("valueIndividual")){
-//                int iteration = UpdateUser.iter;
-//                int [] array = UpdateUser.array;
-//                String name = UpdateUser.userName;
-//
-//                Say intro = SayBuilder.with(qiContext)
-//                        .withText("\\rspd=80\\ schön dass du mit mir ein paar Übungen machen möchtest.")
-//                        .build();
-//                intro.run();
-//                Exercise.doExercise(qiContext, array, iteration);
-//            }
         }
     }
 

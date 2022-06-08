@@ -8,8 +8,6 @@ public class DataLog {
     public String label;
     public long time;
     public Integer i;
-    public Integer age;
-    public Enum gender;
     public Enum pleasureState;
     public Enum excitementState;
     public Enum engagementIntentionState;
@@ -18,41 +16,43 @@ public class DataLog {
     public double distance;
 
     public void animation(String label, long time){
-        Log.i("'animation'", label);
-        Log.i("'timestamp'", String.valueOf(time));
+        Log.d("'animation'", label);
+        Log.d("'timestamp'", String.valueOf(time));
 
         this.label = label;
         this.time = time;
     }
 
-//    public void logHuman(Integer i, Integer age, Enum gender, Enum pleasureState, Enum excitementState, Enum engagementIntentionState, Enum smileState, Enum attentionState, double distance) {
-//
-//        Log.i(TAG, "Human: " + i);
-//        Log.i(TAG, "Age: " + age + " year(s)");
-//        Log.i(TAG, "Gender: " + gender);
-//        Log.i(TAG, "Pleasure state: " + pleasureState);
-//        Log.i(TAG, "Excitement state: " + excitementState);
-//        Log.i(TAG, "Engagement state: " + engagementIntentionState);
-//        Log.i(TAG, "Smile state: " + smileState);
-//        Log.i(TAG, "Attention state: " + attentionState);
-//        Log.i(TAG, "Distance: " + distance + " meter(s).");
-//
-//        this.i=i;
-//        this.age = age;
-//        this.gender = gender;
-//        this.pleasureState = pleasureState;
-//        this.excitementState = excitementState;
-//        this.engagementIntentionState = engagementIntentionState;
-//        this. smileState = smileState;
-//        this.attentionState = attentionState;
-//        this.distance = distance;
-//    }
+    public void logHuman(Integer i, Enum pleasureState, Enum excitementState, Enum engagementIntentionState, Enum smileState, Enum attentionState, double distance) {
 
+        Log.i(TAG, "Human: " + i);
+        Log.i(TAG, "Pleasure state: " + pleasureState);
+        Log.i(TAG, "Excitement state: " + excitementState);
+        Log.i(TAG, "Engagement state: " + engagementIntentionState);
+        Log.i(TAG, "Smile state: " + smileState);
+        Log.i(TAG, "Attention state: " + attentionState);
+        Log.i(TAG, "Distance: " + distance + " meter(s).");
+
+        this.i=i;
+        this.pleasureState = pleasureState;
+        this.excitementState = excitementState;
+        this.engagementIntentionState = engagementIntentionState;
+        this. smileState = smileState;
+        this.attentionState = attentionState;
+        this.distance = distance;
+    }
     @Override
     public String toString (){
-        return "\n animation:\"{" +
+        return "\n animation:\"{\n" +
                 "\t\"label\":" + label + ", \n" +
                 "\t\"time\":" + time + ", \n" +
+                "\t\"number\":" + i + ", \n" +
+                "\t\"pleasureState\":" + pleasureState+ ", \n" +
+                "\t\"excitementState\":" + excitementState + ", \n" +
+                "\t\"engagementIntentionState\":" + engagementIntentionState + ", \n" +
+                "\t\"smileState\":" + smileState + ", \n" +
+                "\t\"attentionState\":" + attentionState + ", \n" +
+                "\t\"distance\":" + distance + ", \n" +
                 "}";
     }
 }

@@ -4,6 +4,7 @@
     android:installLocation="preferExternal">
 
     <uses-feature android:name="com.softbank.hardware.pepper" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -14,15 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PhysioWorkoutLight">
-        <activity
-            android:name=".database.UpdateUser"
-            android:exported="false" />
-        <activity
-            android:name=".database.ViewUser"
-            android:exported="false" />
-        <activity
-            android:name=".database.AddUser"
-            android:exported="false" />
         <activity
             android:name=".PerformActivity"
             android:exported="true" />

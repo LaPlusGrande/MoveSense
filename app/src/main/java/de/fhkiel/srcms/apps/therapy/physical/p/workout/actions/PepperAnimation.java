@@ -22,6 +22,7 @@ public class PepperAnimation extends PepperAction {
     public Animate animate;
     public DataLog dataLog = new DataLog();
 
+
     public void doApplePicking (QiContext qiContext) throws ExecutionException, InterruptedException {
 
         Animation myApplePicking = AnimationBuilder.with(qiContext)
@@ -35,8 +36,7 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
-
+            dataLog.animation(label, time);
             HttpClient client = new HttpClient();
             new Thread(() -> {
                 try {
@@ -62,7 +62,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -79,7 +87,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -97,7 +113,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -115,7 +139,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -133,7 +165,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
     }
 
@@ -150,7 +190,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -168,7 +216,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -186,7 +242,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
@@ -204,12 +268,21 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }
 
     public void doOpenHand (QiContext qiContext) throws ExecutionException, InterruptedException {
+
         Animation myOpenhand = AnimationBuilder.with(qiContext)
                 .withResources(R.raw.openhand)
                 .build();
@@ -222,7 +295,6 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-
             HttpClient client = new HttpClient();
             new Thread(() -> {
                 try {
@@ -233,7 +305,6 @@ public class PepperAnimation extends PepperAction {
             }).start();
         });
         System.out.println(dataLog.toString());
-
     }
 
     public void doBendBody(QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -249,7 +320,15 @@ public class PepperAnimation extends PepperAction {
         moveFuture(animate.async().run());
 
         animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label,time);
+            dataLog.animation(label, time);
+            HttpClient client = new HttpClient();
+            new Thread(() -> {
+                try {
+                    client.dataPost( dataLog.toString() );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         });
         System.out.println(dataLog.toString());
     }

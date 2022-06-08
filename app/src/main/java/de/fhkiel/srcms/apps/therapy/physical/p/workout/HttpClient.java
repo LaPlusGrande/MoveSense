@@ -18,83 +18,69 @@ import java.net.URLConnection;
 
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation;
 
-public class HttpClient //extends Thread {
+public class HttpClient
 {
 
     private static String TAG = HttpClient.class.getName();
     private PepperAnimation pepperAnimation = new PepperAnimation();
+    private static String key;
+    private String physioKey = "{'key': '47654d4cfcefe1092b7afb12d18b55c9859d2bd9226e381c4f50a0447d1122afe84dd3cb94c8aa00fd09ee8a5847977efa5a7e4c4aa16f0754f9493923d96cef8b9ce21334700482b7a8b7d68ae852a0f4133a48b8fa3084c034978374a99169eedde1216d04eda810ed981b5cb946ff310fdf5770b581cde5951546adb238d7'}";
 
-    /*public HttpClient(){
-        super("HttpClient");
-    }*/
 
-    public void run(){
-//        try {
-//            dataGet();
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-        /*try {
-            System.out.println("inside thread");
-                //dataPost();
-        } catch (IOException e) {
+    public void getKey (){
+
+            try{
+            URL url = new URL("http://192.168.178.10:5837/app/login/Physio-Workout");
+            URLConnection connection = url.openConnection();
+            connection.setDoOutput(true);
+
+            connection.setRequestProperty("Content-Type", "text/plain");
+            connection.setRequestProperty("Content-Length", physioKey);
+
+            try (DataOutputStream dos = new DataOutputStream(connection.getOutputStream())) {
+                dos.writeBytes(physioKey);
+            }catch (IOException e){
+                Log.d(TAG,"DOS"+ e);
+            }
+
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+//                while ((key = br.readLine()) != null) {
+//                    System.out.println(key);
+//                }
+                key = br.readLine();
+                    System.out.println(key);
+            }catch (IOException e){
+                Log.d(TAG, "ISR"+ e);
+            }
+        }catch (IOException e){
             e.printStackTrace();
-        }*/
+        }
     }
-
-//    public void dataGet() throws MalformedURLException {
-//
-//        URLConnection connection = null;
-//        try{
-//            URL url = new URL("http://10.0.2.2:5837/generate/key");
-//            connection = url.openConnection();
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
-//        try {
-//            System.out.println(connection.getInputStream());
-//        }catch (IOException e){
-//            System.out.println(e +":(");
-//        }
-//
-//        BufferedReader in = null;
-//        try {
-//            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        String line;
-//        try {
-//            while ((line = in.readLine()) != null) {
-//                System.out.println(line);
-//            }
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
-//    }
 
     public void dataPost(String text) throws IOException {
 
-        URLConnection connection =null;
+        URLConnection connection;
         try {
 //            URL url = new URL("http://10.0.2.2:5837/app/Physio-Workout/log/app");
-            URL url = new URL("http://192.168.178.122:5837/app/Physio-Workout/log/app");
-//            URL url = new URL("http://localhost:5837/app/Physio-Workout/log/app");
+//          Raspberry Pi, IP 192.168.178.10, Port 5837
+
+            URL url = new URL("http://192.168.178.10:5837/app/Physio-Workout/log/app");
+
             connection = url.openConnection();
             connection.setDoOutput(true);
 
-            String test = "{'key': '{O#VHNw:az>XEYglOEri#*!YY/+8_0=(PB8Fs0{YdJa2EkzoLVTCc<)0m!_7Wop,','data':'"+ text +"'}";
-//            String test = "{'key': 'hn<K/Z&L=YB03}gLiufe)(!9;YIm2%6h?4DPd=3ZLe1E8x??BbAJ0md#u4v=48:2','data':'test test test'}";
+            String test = "{'key': '"+ key +"','data':'"+ text +"'}";
 
             connection.setRequestProperty("Content-Type", "text/plain");
             connection.setRequestProperty("Content-Length", Integer.toString(test.length()));
 
             try (DataOutputStream dos = new DataOutputStream(connection.getOutputStream())) {
                 dos.writeBytes(test);
+                System.out.println(test);
             }catch (IOException e){
                 Log.e(TAG,"DOS"+ e);
             }
+
             try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 String line;
                 while ((line = br.readLine()) != null) {

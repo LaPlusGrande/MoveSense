@@ -9,6 +9,9 @@ import android.widget.Button;
 
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation;
 
 public class Welcome extends RobotActivity {
@@ -45,15 +48,10 @@ public class Welcome extends RobotActivity {
             }
         });
 
-//        individual_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent individualIntent = new Intent(Welcome.this,Individual.class);
-//                startActivity(individualIntent);
-//            }
-//        });
-
-        //runPost.start();
+        new Thread(() -> {
+            HttpClient client = new HttpClient();
+            client.getKey();
+        }).start();
     }
 
 }
