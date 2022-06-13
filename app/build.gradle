@@ -27,6 +27,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'de.fhkiel.srcms.apps.therapy.physical.p.workout'
 }
 
 dependencies {
