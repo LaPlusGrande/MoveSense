@@ -10,8 +10,8 @@ android {
         applicationId "de.fhkiel.srcms.apps.therapy.physical.p.workout"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 3
-        versionName '2022.05.02'
+        versionCode 4
+        versionName '2022.06.01'
     }
 
     buildTypes {
