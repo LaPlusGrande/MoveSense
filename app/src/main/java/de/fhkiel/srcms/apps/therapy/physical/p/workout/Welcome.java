@@ -12,7 +12,7 @@ public class Welcome extends RobotActivity {
 
     private static final String TAG = Welcome.class.getName();
 
-    public Button groupe_button, demo_button;
+    public Button groupe_button, demo_button, exit_button;
 
 
     @Override
@@ -25,6 +25,7 @@ public class Welcome extends RobotActivity {
 
         groupe_button = (Button) findViewById(R.id.btn_groupe);
         demo_button = (Button) findViewById(R.id.btn_demo);
+        exit_button = (Button) findViewById(R.id.btnWelcomeExit);
 
         groupe_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +40,13 @@ public class Welcome extends RobotActivity {
             public void onClick(View view) {
                 Intent individualIntent = new Intent(Welcome.this,Demo.class);
                 startActivity(individualIntent);
+            }
+        });
+
+        exit_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAffinity();
             }
         });
 
