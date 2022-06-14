@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
+import com.aldebaran.qi.sdk.design.activity.conversationstatus.SpeechBarDisplayStrategy;
 
 public class Welcome extends RobotActivity {
 
@@ -18,6 +19,9 @@ public class Welcome extends RobotActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        // disable speech bar
+        setSpeechBarDisplayStrategy(SpeechBarDisplayStrategy.IMMERSIVE);
 
         groupe_button = (Button) findViewById(R.id.btn_groupe);
         demo_button = (Button) findViewById(R.id.btn_demo);
