@@ -15,19 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhysioWorkoutLight">
         <activity
-            android:name=".database.UpdateUser"
-            android:exported="false" />
-        <activity
-            android:name=".database.ViewUser"
-            android:exported="false" />
-        <activity
-            android:name=".database.AddUser"
-            android:exported="false" />
-        <activity
             android:name=".PerformActivity"
             android:exported="true" />
-        <activity android:name=".Demo" /> <!-- <activity android:name=".ElbowStretch" /> -->
-        <!-- <activity android:name=".OpenHand" /> -->
+        <activity android:name=".Demo" />
         <activity android:name=".GroupEntry" />
         <activity android:name=".Welcome"
             android:exported="true">

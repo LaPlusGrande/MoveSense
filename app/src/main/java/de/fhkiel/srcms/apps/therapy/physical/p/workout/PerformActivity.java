@@ -127,17 +127,6 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
                     Exercise.doExercise(qiContext, arrayBendBody, iterationDemo);
                     break;
             }
-//            if (performMethod.equals("valueIndividual")){
-//                int iteration = UpdateUser.iter;
-//                int [] array = UpdateUser.array;
-//                String name = UpdateUser.userName;
-//
-//                Say intro = SayBuilder.with(qiContext)
-//                        .withText("\\rspd=80\\ schön dass du mit mir ein paar Übungen machen möchtest.")
-//                        .build();
-//                intro.run();
-//                Exercise.doExercise(qiContext, array, iteration);
-//            }
         }
     }
 
