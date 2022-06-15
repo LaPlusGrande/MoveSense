@@ -65,6 +65,10 @@ public class HttpClient
             @Override
             public void run() {
 
+                if (key.length() > 0) {
+                    login();
+                }
+
                 URLConnection connection;
                 try {
                     URL url = new URL("http://" + loggingServerIP + ":5837/app/Physio-Workout/log/app");
