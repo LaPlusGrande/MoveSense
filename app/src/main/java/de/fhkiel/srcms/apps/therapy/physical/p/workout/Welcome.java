@@ -55,6 +55,7 @@ public class Welcome extends RobotActivity {
 
         new Thread(() -> {
             loginKey = logging.login();
+            logging.dataPost("{'activity': '" + this.getLocalClassName() + "'}");
         }).start();
     }
 
