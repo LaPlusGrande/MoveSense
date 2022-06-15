@@ -58,7 +58,9 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
         if (getIntent().hasExtra("login_key")){
             loginKey = getIntent().getStringExtra("login_key");
             logging.setKey(loginKey);
-            logging.dataPost("{'activity': '" + this.getLocalClassName() + "'}");
+            DataLog data = new DataLog();
+            data.activity = this.getLocalClassName();
+            logging.dataPost( data );
         }
 
         hard_button = (Button) findViewById(R.id.button_hard_animation);

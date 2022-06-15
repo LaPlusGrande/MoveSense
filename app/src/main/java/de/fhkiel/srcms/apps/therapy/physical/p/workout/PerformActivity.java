@@ -41,7 +41,9 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
         if (getIntent().hasExtra("login_key")){
             loginKey = getIntent().getStringExtra("login_key");
             logging.setKey(loginKey);
-            logging.dataPost("{'activity': '" + this.getLocalClassName() + "'}");
+            DataLog data = new DataLog();
+            data.activity = this.getLocalClassName();
+            logging.dataPost( data );
         }
 
         // implement random gif
