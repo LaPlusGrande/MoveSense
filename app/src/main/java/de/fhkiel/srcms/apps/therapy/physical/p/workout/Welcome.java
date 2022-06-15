@@ -50,8 +50,8 @@ public class Welcome extends RobotActivity {
             }
         });
 
-        Thread runPost = new HttpClient();
-        runPost.start();
+//        HttpClient runPost = new HttpClient();
+
 
     }
 
