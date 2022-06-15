@@ -36,6 +36,7 @@ public class Welcome extends RobotActivity {
             @Override
             public void onClick(View view) {
                 Intent groupeIntent = new Intent(Welcome.this, GroupEntry.class);
+                groupeIntent.putExtra("login_key", loginKey);
                 startActivity(groupeIntent);
             }
         });
@@ -44,6 +45,7 @@ public class Welcome extends RobotActivity {
             @Override
             public void onClick(View view) {
                 Intent individualIntent = new Intent(Welcome.this,Demo.class);
+                individualIntent.putExtra("login_key", loginKey);
                 startActivity(individualIntent);
             }
         });
