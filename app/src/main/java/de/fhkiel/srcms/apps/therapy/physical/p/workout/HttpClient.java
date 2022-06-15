@@ -22,12 +22,9 @@ public class HttpClient
     // Raspberry Pi, IP 192.168.178.10, Port 5837
     private static final String loggingServerIP = "192.168.1.7";
 
-    public HttpClient(){}
-
-    public HttpClient(String key) {
+    public void setKey(String key){
         this.key = key;
     }
-
 
     public String login (){
 
