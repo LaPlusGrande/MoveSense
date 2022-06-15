@@ -131,14 +131,7 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
             AttentionState attentionState = human.getAttention();
             dataLog.logHuman(i, pleasureState,excitementState, engagementIntentionState, smileState, attentionState, distance);
 
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            logging.dataPost( dataLog.toString() );
         }
     }
     public static double computeDistance(Frame humanFrame, Frame robotFrame) {
