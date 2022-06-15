@@ -7,6 +7,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -60,35 +61,45 @@ public class HttpClient
 
     public void dataPost(String text) throws IOException {
 
-        URLConnection connection;
-        try {
-            URL url = new URL("http://" + loggingServerIP + ":5837/app/Physio-Workout/log/app");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
 
-            connection = url.openConnection();
-            connection.setDoOutput(true);
+                URLConnection connection;
+                try {
+                    URL url = new URL("http://" + loggingServerIP + ":5837/app/Physio-Workout/log/app");
 
-            String test = "{'key': '"+ key +"','data':'"+ text +"'}";
+                    connection = url.openConnection();
+                    connection.setDoOutput(true);
 
-            connection.setRequestProperty("Content-Type", "text/plain");
-            connection.setRequestProperty("Content-Length", Integer.toString(test.length()));
+                    String test = "{'key': '" + key + "','data':'" + text + "'}";
 
-            try (DataOutputStream dos = new DataOutputStream(connection.getOutputStream())) {
-                dos.writeBytes(test);
-                System.out.println(test);
-            }catch (IOException e){
-                Log.e(TAG,"DOS"+ e);
-            }
+                    connection.setRequestProperty("Content-Type", "text/plain");
+                    connection.setRequestProperty("Content-Length", Integer.toString(test.length()));
 
-            try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    System.out.println(line);
+                    try (DataOutputStream dos = new DataOutputStream(connection.getOutputStream())) {
+                        dos.writeBytes(test);
+                        System.out.println(test);
+                    } catch (IOException e) {
+                        Log.e(TAG, "DOS" + e);
+                    }
+
+                    try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            System.out.println(line);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } catch (NullPointerException | MalformedURLException e) {
+                    Log.e(TAG, "sending Data" + e);
+                } catch (IOException e) {
+                    Log.e(TAG, "sending Data" + e);
                 }
-            }catch (IOException e){
-                e.printStackTrace();
+
             }
-        }catch (NullPointerException e){
-            Log.e(TAG,"sending Data"+e);
-        }
+        }).start();
+
     }
 }
