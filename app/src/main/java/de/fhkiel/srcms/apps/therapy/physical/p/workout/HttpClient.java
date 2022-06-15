@@ -92,9 +92,7 @@ public class HttpClient
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                } catch (NullPointerException | MalformedURLException e) {
-                    Log.e(TAG, "sending Data" + e);
-                } catch (IOException e) {
+                } catch (NullPointerException | IOException e) {
                     Log.e(TAG, "sending Data" + e);
                 }
 
