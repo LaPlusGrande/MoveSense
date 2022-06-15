@@ -88,10 +88,8 @@ public class HttpClient
                     }
 
                     try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
-                        String line;
-                        while ((line = br.readLine()) != null) {
-                            System.out.println(line);
-                        }
+                        String line = br.readLine();
+                        System.out.println(line);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
