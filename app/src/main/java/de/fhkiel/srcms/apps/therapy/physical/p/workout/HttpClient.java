@@ -59,7 +59,7 @@ public class HttpClient
         return null;
     }
 
-    public void dataPost(String text) throws IOException {
+    public void dataPost(String text){
 
         new Thread(new Runnable() {
             @Override
