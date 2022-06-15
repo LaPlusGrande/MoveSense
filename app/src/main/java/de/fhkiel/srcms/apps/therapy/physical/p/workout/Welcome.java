@@ -16,7 +16,7 @@ import de.fhkiel.srcms.apps.therapy.physical.p.workout.actions.PepperAnimation;
 
 public class Welcome extends RobotActivity {
 
-    //public static Thread runPost = new HttpClient();
+    private String loginKey = null;
 
     private static final String TAG = Welcome.class.getName();
 
@@ -49,8 +49,7 @@ public class Welcome extends RobotActivity {
         });
 
         new Thread(() -> {
-            HttpClient client = new HttpClient();
-            client.login();
+            loginKey = ( new HttpClient() ).login();
         }).start();
     }
 
