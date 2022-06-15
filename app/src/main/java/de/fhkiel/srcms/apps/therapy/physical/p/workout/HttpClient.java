@@ -17,7 +17,6 @@ public class HttpClient
 {
 
     private static final String TAG = HttpClient.class.getName();
-    private PepperAnimation pepperAnimation = new PepperAnimation();
     private String key = "";
 
     // Raspberry Pi, IP 192.168.178.10, Port 5837
