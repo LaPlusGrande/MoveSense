@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.DataLog;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.Exercise;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.HttpClient;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome;
@@ -37,14 +38,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -63,14 +57,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -89,13 +76,7 @@ public class PepperAnimation extends PepperAction {
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
             HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -115,13 +96,7 @@ public class PepperAnimation extends PepperAction {
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
             HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -140,14 +115,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -166,14 +134,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
     }
 
@@ -191,14 +152,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -217,14 +171,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -243,14 +190,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -269,14 +209,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -295,14 +228,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
@@ -321,14 +247,7 @@ public class PepperAnimation extends PepperAction {
 
         animate.addOnLabelReachedListener((label, time) -> {
             dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            new Thread(() -> {
-                try {
-                    client.dataPost( dataLog.toString() );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+            Exercise.logging.dataPost( dataLog.toString() );
         });
         System.out.println(dataLog.toString());
     }
