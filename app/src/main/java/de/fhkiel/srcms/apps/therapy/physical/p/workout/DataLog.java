@@ -2,9 +2,13 @@ package de.fhkiel.srcms.apps.therapy.physical.p.workout;
 
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class DataLog {
 
     private static String TAG = DataLog.class.getName();
+    public String activity;
     public String label;
     public long time;
     public Integer i;
@@ -41,18 +45,29 @@ public class DataLog {
         this.attentionState = attentionState;
         this.distance = distance;
     }
+
     @Override
     public String toString (){
-        return "\n animation:\"{\n" +
-                "\t\"label\":" + label + ", \n" +
-                "\t\"time\":" + time + ", \n" +
-                "\t\"number\":" + i + ", \n" +
-                "\t\"pleasureState\":" + pleasureState+ ", \n" +
-                "\t\"excitementState\":" + excitementState + ", \n" +
-                "\t\"engagementIntentionState\":" + engagementIntentionState + ", \n" +
-                "\t\"smileState\":" + smileState + ", \n" +
-                "\t\"attentionState\":" + attentionState + ", \n" +
-                "\t\"distance\":" + distance + ", \n" +
-                "}";
+        JSONObject root = new JSONObject();
+        JSONObject animation = new JSONObject();
+
+        try {
+            animation.put("label", label);
+            animation.put("time", time);
+            animation.put("number", i);
+            animation.put("pleasureState", pleasureState);
+            animation.put("excitementState", excitementState);
+            animation.put("engagementIntentionState", engagementIntentionState);
+            animation.put("smileState", smileState);
+            animation.put("attentionState", attentionState);
+            animation.put("distance", distance);
+
+            root.put("activity", activity);
+            root.put("animation", animation);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return root.toString();
     }
 }
