@@ -50,7 +50,7 @@ public class Welcome extends RobotActivity {
 
         new Thread(() -> {
             HttpClient client = new HttpClient();
-            client.getKey();
+            client.login();
         }).start();
     }
 

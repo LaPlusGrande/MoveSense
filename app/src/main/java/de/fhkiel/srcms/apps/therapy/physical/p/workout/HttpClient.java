@@ -24,7 +24,7 @@ public class HttpClient
     private static String loggingServerIP = "192.168.1.7";
 
 
-    public void getKey (){
+    public String login (){
 
         try{
 
@@ -44,12 +44,15 @@ public class HttpClient
             try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 key = br.readLine();
                     System.out.println("key" + key);
+                return key;
             }catch (IOException e){
                 Log.d(TAG, "ISR"+ e);
             }
         }catch (IOException e){
             e.printStackTrace();
         }
+
+        return null;
     }
 
     public void dataPost(String text) throws IOException {
