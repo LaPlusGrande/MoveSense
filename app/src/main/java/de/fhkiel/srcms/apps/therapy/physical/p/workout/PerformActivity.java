@@ -23,11 +23,20 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
     public Button cancel_button;
     private ImageView imageView;
 
+    private String loginKey = null;
+    private HttpClient logging = new HttpClient();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perform_activity);
         QiSDK.register(this, this);
+
+        // get logging client key
+        if (getIntent().hasExtra("login_key")){
+            loginKey = getIntent().getStringExtra("login_key");
+            logging.setKey(loginKey);
+        }
 
         // implement random gif
         TypedArray images = getResources().obtainTypedArray(R.array.gif_array);
@@ -36,12 +45,15 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
         Glide.with(PerformActivity.this).load(images.getResourceId(choice,R.drawable.banana)).into(imageView);
         images.recycle();
 
+        // get loginkey
+
         cancel_button = (Button) findViewById(R.id.cancel_back_button);
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Exercise.cancel();
                     Intent backIntent = new Intent(PerformActivity.this, Welcome.class);
+                    backIntent.putExtra("login_key", loginKey);
                     startActivity(backIntent);
             }
         });

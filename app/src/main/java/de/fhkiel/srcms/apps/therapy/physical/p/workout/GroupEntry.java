@@ -32,6 +32,9 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
 
     private static final String TAG = GroupEntry.class.getName();
 
+    private String loginKey = null;
+    private HttpClient logging = new HttpClient();
+
     public Button hard_button;
     public Button easy_button;
     public Button back_button;
@@ -47,6 +50,12 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
         QiSDK.register(this, this);
 
         setContentView(R.layout.activity_group_entry);
+
+        // get logging client key
+        if (getIntent().hasExtra("login_key")){
+            loginKey = getIntent().getStringExtra("login_key");
+            logging.setKey(loginKey);
+        }
 
         hard_button = (Button) findViewById(R.id.button_hard_animation);
         easy_button = (Button) findViewById(R.id.button_easy_animation);
@@ -74,6 +83,7 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
 
                 Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
                 performIntent.putExtra("keyPerform", "valueHardPerform");
+                performIntent.putExtra("login_key", loginKey);
                 startActivity(performIntent);
             }
         });
@@ -83,6 +93,7 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
 
                 Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
                 performIntent.putExtra("keyPerform", "valueEasyPerform");
+                performIntent.putExtra("login_key", loginKey);
                 startActivity(performIntent);
             }
         });
