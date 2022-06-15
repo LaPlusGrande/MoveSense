@@ -35,6 +35,8 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
 
         QiSDK.register(this, this);
 
+        Exercise.logging = logging;
+
         // get logging client key
         if (getIntent().hasExtra("login_key")){
             loginKey = getIntent().getStringExtra("login_key");
