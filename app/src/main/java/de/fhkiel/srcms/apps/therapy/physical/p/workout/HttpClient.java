@@ -91,7 +91,7 @@ public class HttpClient
                         dos.writeBytes(stringData);
                         Log.d(TAG, "data send");
                     } catch (IOException e) {
-                        Log.e(TAG, "failed to write data" + e);
+                        Log.e(TAG, "failed to write data: " + e);
                     }
 
                     try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
