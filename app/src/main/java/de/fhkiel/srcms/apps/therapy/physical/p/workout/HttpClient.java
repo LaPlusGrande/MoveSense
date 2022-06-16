@@ -45,7 +45,7 @@ public class HttpClient
             try (DataOutputStream dos = new DataOutputStream(connection.getOutputStream())) {
                 dos.writeBytes(physioKey);
             }catch (IOException e){
-                Log.e(TAG,"Exception"+ e);
+                Log.e(TAG,"Exception sending login data: " + e);
             }
 
             try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
@@ -53,10 +53,10 @@ public class HttpClient
                 Log.d(TAG, "got login key" + key);
                 return key;
             }catch (IOException e){
-                Log.e(TAG, "ISR"+ e);
+                Log.e(TAG, "cannot read response: "+ e);
             }
         }catch (IOException e){
-            e.printStackTrace();
+            Log.e(TAG, "cannot login to logging server " + loggingServerIP.toString());
         }
 
         return null;
@@ -91,7 +91,7 @@ public class HttpClient
                         dos.writeBytes(stringData);
                         Log.d(TAG, "data send");
                     } catch (IOException e) {
-                        Log.e(TAG, "DOS" + e);
+                        Log.e(TAG, "failed to write data" + e);
                     }
 
                     try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
