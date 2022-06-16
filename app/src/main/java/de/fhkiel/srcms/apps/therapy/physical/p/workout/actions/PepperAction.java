@@ -1,9 +1,16 @@
 package de.fhkiel.srcms.apps.therapy.physical.p.workout.actions;
 
+import android.util.Log;
+
+import com.aldebaran.qi.QiException;
+
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 public class PepperAction {
+
+    private static final String TAG = PepperAction.class.getName();
+
     public static Future<Void> currentMove = null;
     public static Future<Void> currentSay = null;
     public static boolean cancelled = false;
@@ -31,13 +38,21 @@ public class PepperAction {
 
     public static void waitForSay() throws ExecutionException, InterruptedException {
         if (currentSay != null)
-            currentSay.get();
+            try{
+                currentSay.get();
+            } catch (QiException e){
+                Log.w(TAG, "cannot execute say text: " + e);
+            }
         currentSay = null;
     }
 
     public static void waitForMove() throws ExecutionException, InterruptedException {
         if (currentMove != null)
-            currentMove.get();
+            try{
+                currentMove.get();
+            } catch (QiException e){
+                Log.w(TAG, "cannot execute movement: " + e);
+            }
         currentMove = null;
     }
 
