@@ -69,7 +69,7 @@ public class HttpClient
             @Override
             public void run() {
 
-                if (key.length() <= 0) {
+                if (key && key.length() <= 0) {
                     login();
                 }
 
