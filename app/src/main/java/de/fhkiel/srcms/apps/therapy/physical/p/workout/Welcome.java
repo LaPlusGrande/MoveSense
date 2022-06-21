@@ -32,8 +32,7 @@ public class Welcome extends RobotActivity {
         setSpeechBarDisplayStrategy(SpeechBarDisplayStrategy.IMMERSIVE);
 
         groupe_button = (Button) findViewById(R.id.btn_groupe);
-        demo_button = (Button) findViewById(R.id.btn_demo);
-//        individual_button = (Button) findViewById(R.id.btn_individual);
+//        demo_button = (Button) findViewById(R.id.btn_demo);
 
         groupe_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,14 +43,14 @@ public class Welcome extends RobotActivity {
             }
         });
 
-        demo_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent individualIntent = new Intent(Welcome.this,Demo.class);
-                individualIntent.putExtra("login_key", loginKey);
-                startActivity(individualIntent);
-            }
-        });
+//        demo_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent individualIntent = new Intent(Welcome.this,Demo.class);
+//                individualIntent.putExtra("login_key", loginKey);
+//                startActivity(individualIntent);
+//            }
+//        });
 
         new Thread(() -> {
             loginKey = logging.login();

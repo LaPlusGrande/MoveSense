@@ -14,7 +14,6 @@ public class Exercise extends PepperAction {
 
     public static HttpClient logging = new HttpClient();
 
-
     public static void cancel(){
         PepperAction.abortPepper();
     }

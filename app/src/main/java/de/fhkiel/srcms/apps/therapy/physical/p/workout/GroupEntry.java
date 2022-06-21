@@ -124,7 +124,7 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
             // Get the human.
             Human human = humans.get(i);
             Frame humanFrame = human.getHeadFrame();
-            // Compute the distance.
+
             double distance = computeDistance(humanFrame, robotFrame);
             PleasureState pleasureState = human.getEmotion().getPleasure();
             ExcitementState excitementState = human.getEmotion().getExcitement();

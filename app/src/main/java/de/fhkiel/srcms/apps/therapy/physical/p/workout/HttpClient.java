@@ -108,7 +108,6 @@ public class HttpClient
                 } catch (NullPointerException | IOException e) {
                     Log.e(TAG, "error sending Data" + e);
                 }
-
             }
         }).start();
 

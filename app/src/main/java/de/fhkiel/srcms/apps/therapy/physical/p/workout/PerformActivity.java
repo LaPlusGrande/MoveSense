@@ -80,7 +80,7 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
             switch(performMethod){
                 case "valueHardPerform":
                     int[] arrayHard = {10,7,6,1,4,9,8,2,5,12,0};
-//                    int[] arrayHard = {10,0};
+
                     int iterationHard = 2;
 
                     Say introHard = SayBuilder.with(qiContext)

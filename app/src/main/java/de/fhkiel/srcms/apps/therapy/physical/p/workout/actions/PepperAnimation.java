@@ -23,7 +23,6 @@ public class PepperAnimation extends PepperAction {
     public Animate animate;
     public DataLog dataLog = new DataLog();
 
-
     public void doApplePicking (QiContext qiContext) throws ExecutionException, InterruptedException {
 
         Animation myApplePicking = AnimationBuilder.with(qiContext)
