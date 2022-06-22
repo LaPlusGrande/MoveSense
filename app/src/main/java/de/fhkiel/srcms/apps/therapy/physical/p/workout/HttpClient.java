@@ -23,7 +23,7 @@ public class HttpClient
     private String key = "";
 
     // Raspberry Pi, IP 192.168.178.10, Port 5837
-    private static final String loggingServerIP = "192.168.1.7";
+    private static final String loggingServerIP = "192.168.178.10";
 
     public void setKey(String key){
         this.key = key;
