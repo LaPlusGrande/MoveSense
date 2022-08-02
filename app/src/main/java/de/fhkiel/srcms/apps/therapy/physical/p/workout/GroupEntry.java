@@ -29,19 +29,25 @@ import com.aldebaran.qi.sdk.object.humanawareness.HumanAwareness;
 import java.io.IOException;
 import java.util.List;
 
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens.DataCalculation;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens.MainMovesense;
+
 public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks {
 
     private static final String TAG = GroupEntry.class.getName();
-
-    private String loginKey = null;
-    private HttpClient logging = new HttpClient();
+//
+//    private String loginKey = null;
+//    private HttpClient logging = new HttpClient();
 
     public Button hard_button;
     public Button easy_button;
     public Button back_button;
     private static HumanAwareness humanAwareness;
     private static QiContext qiContext;
-    public DataLog dataLog = new DataLog();
+//    public DataLog dataLog = new DataLog();
+    private MainMovesense mainMovesense = new MainMovesense();
+    public String data;
+
 
     
     @Override
@@ -55,103 +61,102 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
         setContentView(R.layout.activity_group_entry);
 
         // get logging client key
-        if (getIntent().hasExtra("login_key")){
-            loginKey = getIntent().getStringExtra("login_key");
-            logging.setKey(loginKey);
-            DataLog data = new DataLog();
-            data.activity = this.getLocalClassName();
-            logging.dataPost( data );
-        }
+//        if (getIntent().hasExtra("login_key")){
+//            loginKey = getIntent().getStringExtra("login_key");
+//            logging.setKey(loginKey);
+//            DataLog data = new DataLog();
+//            data.activity = this.getLocalClassName();
+//            logging.dataPost( data );
+//        }
 
-        hard_button = (Button) findViewById(R.id.button_hard_animation);
-        easy_button = (Button) findViewById(R.id.button_easy_animation);
-        back_button = (Button) findViewById(R.id.back_button);
+        hard_button = findViewById(R.id.button_hard_animation);
+        easy_button =  findViewById(R.id.button_easy_animation);
+        back_button =  findViewById(R.id.back_button);
 
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent groupeIntent = new Intent(GroupEntry.this, Welcome.class);
-                startActivity(groupeIntent);
-            }
+        back_button.setOnClickListener(view -> {
+            mainMovesense.unsubscribe();
+            Intent groupeIntent = new Intent(GroupEntry.this, Welcome.class);
+            startActivity(groupeIntent);
         });
     }
 
     @Override
     public void onRobotFocusGained(QiContext qiContext) {
-
         GroupEntry.qiContext = qiContext;
-        humanAwareness = qiContext.getHumanAwareness();
-        findHumansAround();
 
-        hard_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
-                performIntent.putExtra("keyPerform", "valueHardPerform");
-                performIntent.putExtra("login_key", loginKey);
-                startActivity(performIntent);
-            }
-        });
-        easy_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
-                performIntent.putExtra("keyPerform", "valueEasyPerform");
-                performIntent.putExtra("login_key", loginKey);
-                startActivity(performIntent);
-            }
-        });
-    }
-    public void findHumansAround() {
-        // Get the humans around the robot.
-        Future<List<Human>> humansAroundFuture = humanAwareness.async().getHumansAround();
-        humansAroundFuture.andThenConsume(humansAround -> Log.i(TAG, humansAround.size() + " human(s) around."));
-
-        // Retrieving characteristics
-        humansAroundFuture.andThenConsume(humansAround -> {
-            Log.i(TAG, humansAround.size() + " human(s) around.");
-            retrieveCharacteristics(humansAround);
-        });
-    }
-
-    public void retrieveCharacteristics(final List<Human> humans) {
-        Actuation actuation = qiContext.getActuation();
-        Frame robotFrame = actuation.robotFrame();
-
-        for (int i = 0; i < humans.size(); i++) {
-            // Get the human.
-            Human human = humans.get(i);
-            Frame humanFrame = human.getHeadFrame();
-
-            double distance = computeDistance(humanFrame, robotFrame);
-            PleasureState pleasureState = human.getEmotion().getPleasure();
-            ExcitementState excitementState = human.getEmotion().getExcitement();
-            EngagementIntentionState engagementIntentionState = human.getEngagementIntention();
-            SmileState smileState = human.getFacialExpressions().getSmile();
-            AttentionState attentionState = human.getAttention();
-            dataLog.logHuman(i, pleasureState,excitementState, engagementIntentionState, smileState, attentionState, distance);
-
-            logging.dataPost( dataLog.toString() );
+        Bundle extraData = getIntent().getExtras();
+        if (extraData== null){
+            Log.d(TAG,"an error occured");
+        } else {
+            data = extraData.getString("dataExtra");
         }
-    }
-    public static double computeDistance(Frame humanFrame, Frame robotFrame) {
-        // Here we will compute the distance between the human and the robot.
-        // Get the TransformTime between the human frame and the robot frame.
-        TransformTime transformTime = humanFrame.computeTransform(robotFrame);
-        // Get the transform.
-        Transform transform = transformTime.getTransform();
-        // Get the translation.
-        Vector3 translation = transform.getTranslation();
-        // Get the x and y components of the translation.
-        double x = translation.getX();
-        double y = translation.getY();
-        double z = translation.getZ();
 
-        // Compute the distance and return it.
-        return Math.sqrt(x * x + y * y);
+//        humanAwareness = qiContext.getHumanAwareness();
+//        findHumansAround();
+        hard_button.setOnClickListener(view -> {
+
+            Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
+            performIntent.putExtra("keyPerform", "valueHardPerform");
+//            performIntent.putExtra("login_key", loginKey);
+            performIntent.putExtra("extraData", data);
+            startActivity(performIntent);
+        });
+        easy_button.setOnClickListener(view -> {
+
+            Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
+            performIntent.putExtra("keyPerform", "valueEasyPerform");
+//            performIntent.putExtra("login_key", loginKey);
+            startActivity(performIntent);
+        });
     }
+//    public void findHumansAround() {
+//        // Get the humans around the robot.
+//        Future<List<Human>> humansAroundFuture = humanAwareness.async().getHumansAround();
+//        humansAroundFuture.andThenConsume(humansAround -> Log.i(TAG, humansAround.size() + " human(s) around."));
+//
+//        // Retrieving characteristics
+//        humansAroundFuture.andThenConsume(humansAround -> {
+//            Log.i(TAG, humansAround.size() + " human(s) around.");
+//            retrieveCharacteristics(humansAround);
+//        });
+//    }
+
+//    public void retrieveCharacteristics(final List<Human> humans) {
+//        Actuation actuation = qiContext.getActuation();
+//        Frame robotFrame = actuation.robotFrame();
+//
+//        for (int i = 0; i < humans.size(); i++) {
+//            // Get the human.
+//            Human human = humans.get(i);
+//            Frame humanFrame = human.getHeadFrame();
+//
+//            double distance = computeDistance(humanFrame, robotFrame);
+//            PleasureState pleasureState = human.getEmotion().getPleasure();
+//            ExcitementState excitementState = human.getEmotion().getExcitement();
+//            EngagementIntentionState engagementIntentionState = human.getEngagementIntention();
+//            SmileState smileState = human.getFacialExpressions().getSmile();
+//            AttentionState attentionState = human.getAttention();
+////            dataLog.logHuman(i, pleasureState,excitementState, engagementIntentionState, smileState, attentionState, distance);
+////
+////            logging.dataPost( dataLog.toString() );
+//        }
+//    }
+//    public static double computeDistance(Frame humanFrame, Frame robotFrame) {
+//        // Here we will compute the distance between the human and the robot.
+//        // Get the TransformTime between the human frame and the robot frame.
+//        TransformTime transformTime = humanFrame.computeTransform(robotFrame);
+//        // Get the transform.
+//        Transform transform = transformTime.getTransform();
+//        // Get the translation.
+//        Vector3 translation = transform.getTranslation();
+//        // Get the x and y components of the translation.
+//        double x = translation.getX();
+//        double y = translation.getY();
+//        double z = translation.getZ();
+//
+//        // Compute the distance and return it.
+//        return Math.sqrt(x * x + y * y);
+//    }
         @Override
     protected void onDestroy() {
         // Unregister the RobotLifecycleCallbacks for this Activity.

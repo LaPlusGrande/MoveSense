@@ -28,6 +28,26 @@ android {
         viewBinding true
     }
     namespace 'de.fhkiel.srcms.apps.therapy.physical.p.workout'
+
+    //--------workaround for 'app:mergeDebugNativeLibs'---------------------------------
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://maven.google.com"
+        }
+        flatDir {
+            dirs 'C:/Users/2609l/Desktop/Master/Sens/app/Movesense/' // Folders to look for jar & aar libraries
+        }
+    }
 }
 
 dependencies {
@@ -35,8 +55,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.navigation:navigation-fragment:2.4.2'
-    implementation 'androidx.navigation:navigation-ui:2.4.2'
+    implementation 'androidx.navigation:navigation-fragment:2.5.1'
+    implementation 'androidx.navigation:navigation-ui:2.5.1'
 	implementation 'com.aldebaran:qisdk:1.7.5'
 	implementation 'com.aldebaran:qisdk-design:1.7.5'
 
@@ -44,7 +64,15 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
 
-//    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    // Movesense .aar lib
+    implementation(name: 'mdslib', version: '1.68.0(1)-release', ext: 'aar')
 
+    // GSON
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // RxAndroidBle
+    implementation "com.polidea.rxandroidble2:rxandroidble:1.10.2"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
 
 }

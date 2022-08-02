@@ -35,11 +35,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doArmRotation (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -54,11 +54,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doArmSide(QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -72,12 +72,12 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            HttpClient client = new HttpClient();
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doBoxing(QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -92,12 +92,12 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            HttpClient client = new HttpClient();
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            HttpClient client = new HttpClient();
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doBreathbreak(QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -112,11 +112,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doClapping (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -131,10 +131,10 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
     }
 
     public void doElbowHand (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -149,11 +149,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doElbowStretch (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -168,11 +168,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doFollowArm (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -187,11 +187,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doLiftArm (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -206,11 +206,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doOpenHand (QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -225,11 +225,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public void doBendBody(QiContext qiContext) throws ExecutionException, InterruptedException {
@@ -244,11 +244,11 @@ public class PepperAnimation extends PepperAction {
 
         moveFuture(animate.async().run());
 
-        animate.addOnLabelReachedListener((label, time) -> {
-            dataLog.animation(label, time);
-            Exercise.logging.dataPost( dataLog.toString() );
-        });
-        System.out.println(dataLog.toString());
+//        animate.addOnLabelReachedListener((label, time) -> {
+//            dataLog.animation(label, time);
+//            Exercise.logging.dataPost( dataLog.toString() );
+//        });
+//        System.out.println(dataLog.toString());
     }
 
     public static void doRotation(QiContext qiContext) throws ExecutionException, InterruptedException {

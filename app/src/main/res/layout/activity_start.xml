@@ -51,6 +51,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_yes_sens"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
+        android:text="Sensor in use"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"
+        style="@style/MyButton"/>
+
+    <Button
+        android:id="@+id/button_no_sens"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="120dp"
+        android:text="Sensor not in use"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"
+        style="@style/MyButton"/>
+
     <!--    <Button-->
 <!--        android:id="@+id/btn_individual"-->
 <!--        android:layout_width="300dp"-->

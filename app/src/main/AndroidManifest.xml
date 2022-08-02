@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhysioWorkoutLight">
         <activity
+            android:name=".movesens.MainMovesense"
+            android:exported="false" />
+        <activity
             android:name=".PerformActivity"
             android:exported="true" />
         <activity android:name=".Demo" />

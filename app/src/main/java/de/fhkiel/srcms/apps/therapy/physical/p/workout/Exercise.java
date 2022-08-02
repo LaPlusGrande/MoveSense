@@ -12,7 +12,7 @@ public class Exercise extends PepperAction {
 
     private static final String TAG = Exercise.class.getName();
 
-    public static HttpClient logging = new HttpClient();
+//    public static HttpClient logging = new HttpClient();
 
     public static void cancel(){
         PepperAction.abortPepper();

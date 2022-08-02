@@ -17,6 +17,9 @@ import com.aldebaran.qi.sdk.design.activity.conversationstatus.SpeechBarDisplayS
 import com.aldebaran.qi.sdk.object.conversation.Say;
 import com.bumptech.glide.Glide;
 
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens.DataCalculation;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens.MainMovesense;
+
 
 public class PerformActivity extends RobotActivity implements RobotLifecycleCallbacks {
 
@@ -24,8 +27,12 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
     public Button cancel_button;
     private ImageView imageView;
 
-    private String loginKey = null;
-    private HttpClient logging = new HttpClient();
+//    private String loginKey = null;
+//    private HttpClient logging = new HttpClient();
+
+    private String sensorData = null;
+
+    private MainMovesense mainMovesense = new MainMovesense();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +42,26 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
 
         QiSDK.register(this, this);
 
-        Exercise.logging = logging;
+//        Exercise.logging = logging;
 
         // get logging client key
-        if (getIntent().hasExtra("login_key")){
-            loginKey = getIntent().getStringExtra("login_key");
-            logging.setKey(loginKey);
-            DataLog data = new DataLog();
-            data.activity = this.getLocalClassName();
-            logging.dataPost( data );
+//        if (getIntent().hasExtra("login_key")){
+//            loginKey = getIntent().getStringExtra("login_key");
+//            logging.setKey(loginKey);
+//            DataLog data = new DataLog();
+//            data.activity = this.getLocalClassName();
+//            logging.dataPost( data );
+//        }
+
+        if (getIntent().hasExtra("extraData")){
+            sensorData = getIntent().getStringExtra("extraData");
+            DataCalculation dataCalculation = new DataCalculation(sensorData);
+            dataCalculation.accelData();
+//            Runnable dataCalculationThread = new DataCalculation(sensorData);
+//            Thread newThread = new Thread(dataCalculationThread);
+//            newThread.start();
         }
+
 
         // implement random gif
         TypedArray images = getResources().obtainTypedArray(R.array.gif_array);
@@ -59,9 +76,10 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                mainMovesense.unsubscribe();
                 Exercise.cancel();
                     Intent backIntent = new Intent(PerformActivity.this, Welcome.class);
-                    backIntent.putExtra("login_key", loginKey);
+//                    backIntent.putExtra("login_key", loginKey);
                     startActivity(backIntent);
             }
         });
@@ -71,6 +89,7 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
     public void onRobotFocusGained(QiContext qiContext) {
 
         Bundle extrasActivity = getIntent().getExtras();
+
         if (extrasActivity== null){
             Log.d(TAG,"an error occured");
         } else {
