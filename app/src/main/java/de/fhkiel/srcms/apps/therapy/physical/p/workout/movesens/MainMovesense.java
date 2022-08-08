@@ -51,7 +51,7 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
     private MdsSubscription mdsSubscription;
     private String subscribedDeviceSerial;
 
-//    public DataCalculation dataCalculation = new DataCalculation();
+    public DataCalculation dataCalculation = new DataCalculation();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,6 +169,7 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
         else {
             // Device is connected, trigger showing /Info
             subscribeToSensor(device.connectedSerial);
+
         }
     }
 
@@ -203,13 +204,14 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
                         AccDataResponse accResponse = new Gson().fromJson(data, AccDataResponse.class);
                         if (accResponse != null && accResponse.body.array.length > 0) {
 
-//                            Runnable dataCalculationThread = new DataCalculation(data);
-//                            Thread newThread = new Thread(dataCalculationThread);
-//                            newThread.start();
+                            Thread dataThread = new Thread(() -> {
+                                dataCalculation.accelData(data);
+                            });
+                            dataThread.start();
 
-                            Intent groupeIntent = new Intent(MainMovesense.this, GroupEntry.class);
-                            groupeIntent.putExtra("dataExtra",data);
-                            startActivity(groupeIntent);
+//                            Intent groupeIntent = new Intent(MainMovesense.this, GroupEntry.class);
+////                                groupeIntent.putExtra("dataExtra",data);
+//                                startActivity(groupeIntent);
 
                             String accStr =
                                     String.format("%.02f, %.02f, %.02f", accResponse.body.array[0].x, accResponse.body.array[0].y, accResponse.body.array[0].z);

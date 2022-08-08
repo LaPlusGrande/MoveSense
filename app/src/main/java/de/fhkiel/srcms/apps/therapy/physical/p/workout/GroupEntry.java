@@ -42,11 +42,12 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
     public Button hard_button;
     public Button easy_button;
     public Button back_button;
-    private static HumanAwareness humanAwareness;
+//    private static HumanAwareness humanAwareness;
     private static QiContext qiContext;
 //    public DataLog dataLog = new DataLog();
-    private MainMovesense mainMovesense = new MainMovesense();
+
     public String data;
+    private DataCalculation dataCalculation = new DataCalculation();
 
 
     
@@ -74,7 +75,6 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
         back_button =  findViewById(R.id.back_button);
 
         back_button.setOnClickListener(view -> {
-            mainMovesense.unsubscribe();
             Intent groupeIntent = new Intent(GroupEntry.this, Welcome.class);
             startActivity(groupeIntent);
         });
@@ -84,12 +84,17 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
     public void onRobotFocusGained(QiContext qiContext) {
         GroupEntry.qiContext = qiContext;
 
-        Bundle extraData = getIntent().getExtras();
-        if (extraData== null){
-            Log.d(TAG,"an error occured");
-        } else {
-            data = extraData.getString("dataExtra");
-        }
+//        Bundle extraData = getIntent().getExtras();
+//        if (extraData== null){
+//            Log.d(TAG,"an error occured");
+//        } else {
+//            data = extraData.getString("dataExtra");
+//
+//            Thread dataThread = new Thread(() -> {
+//                dataCalculation.accelData(data);
+//            });
+//            dataThread.start();
+//        }
 
 //        humanAwareness = qiContext.getHumanAwareness();
 //        findHumansAround();
@@ -98,7 +103,6 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
             Intent performIntent = new Intent(GroupEntry.this, PerformActivity.class);
             performIntent.putExtra("keyPerform", "valueHardPerform");
 //            performIntent.putExtra("login_key", loginKey);
-            performIntent.putExtra("extraData", data);
             startActivity(performIntent);
         });
         easy_button.setOnClickListener(view -> {
@@ -136,9 +140,9 @@ public class GroupEntry extends RobotActivity implements RobotLifecycleCallbacks
 //            EngagementIntentionState engagementIntentionState = human.getEngagementIntention();
 //            SmileState smileState = human.getFacialExpressions().getSmile();
 //            AttentionState attentionState = human.getAttention();
-////            dataLog.logHuman(i, pleasureState,excitementState, engagementIntentionState, smileState, attentionState, distance);
-////
-////            logging.dataPost( dataLog.toString() );
+//            dataLog.logHuman(i, pleasureState,excitementState, engagementIntentionState, smileState, attentionState, distance);
+//
+//            logging.dataPost( dataLog.toString() );
 //        }
 //    }
 //    public static double computeDistance(Frame humanFrame, Frame robotFrame) {

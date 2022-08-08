@@ -25,14 +25,11 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
 
     private final static String TAG = PerformActivity.class.getName();
     public Button cancel_button;
-    private ImageView imageView;
 
 //    private String loginKey = null;
 //    private HttpClient logging = new HttpClient();
 
-    private String sensorData = null;
-
-    private MainMovesense mainMovesense = new MainMovesense();
+//    private MainMovesense mainMovesense = new MainMovesense();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,35 +50,22 @@ public class PerformActivity extends RobotActivity implements RobotLifecycleCall
 //            logging.dataPost( data );
 //        }
 
-        if (getIntent().hasExtra("extraData")){
-            sensorData = getIntent().getStringExtra("extraData");
-            DataCalculation dataCalculation = new DataCalculation(sensorData);
-            dataCalculation.accelData();
-//            Runnable dataCalculationThread = new DataCalculation(sensorData);
-//            Thread newThread = new Thread(dataCalculationThread);
-//            newThread.start();
-        }
-
-
         // implement random gif
         TypedArray images = getResources().obtainTypedArray(R.array.gif_array);
         int choice = (int) (Math.random()*images.length());
-        imageView = findViewById(R.id.my_gif);
+        ImageView imageView = findViewById(R.id.my_gif);
         Glide.with(PerformActivity.this).load(images.getResourceId(choice,R.drawable.banana)).into(imageView);
         images.recycle();
 
         // get loginkey
 
         cancel_button = (Button) findViewById(R.id.cancel_back_button);
-        cancel_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        cancel_button.setOnClickListener(view -> {
 //                mainMovesense.unsubscribe();
-                Exercise.cancel();
-                    Intent backIntent = new Intent(PerformActivity.this, Welcome.class);
+            Exercise.cancel();
+                Intent backIntent = new Intent(PerformActivity.this, Welcome.class);
 //                    backIntent.putExtra("login_key", loginKey);
-                    startActivity(backIntent);
-            }
+                startActivity(backIntent);
         });
     }
 

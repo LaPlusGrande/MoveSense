@@ -12,11 +12,10 @@ public class AccDataResponse {
     }
 
     public static class Body {
-        // timestamp in millisec
+
         @SerializedName("Timestamp")
         public final long timestamp;
 
-        // the g selected rang is -32767 and 32767, unit is m/s^2
         @SerializedName("ArrayAcc")
         public final Array[] array;
 

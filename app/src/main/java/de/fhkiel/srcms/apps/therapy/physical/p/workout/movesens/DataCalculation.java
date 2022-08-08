@@ -3,30 +3,47 @@ package de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens;
 import static java.lang.Math.abs;
 import static java.lang.Math.sqrt;
 
+import static de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens.MainMovesense.URI_EVENTLISTENER;
+
+import android.content.Context;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+import com.movesense.mds.Mds;
+import com.movesense.mds.MdsException;
+import com.movesense.mds.MdsNotificationListener;
+import com.movesense.mds.MdsSubscription;
 
 import java.util.Arrays;
 
-public class DataCalculation {
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupEntry;
+import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
 
-    public double x,y,z;
-    public String data;
+public class DataCalculation extends AppCompatActivity {
 
-    public double previousX, previousY, previousZ, currentX, currentY, currentZ;
+    private static final String TAG = GroupEntry.class.getName();
 
-    public double velX,disX,velY, disY,velZ,disZ;
-    public double r, v;
+    double x,y,z;
 
-    public long startCounter, stopCounter;
-    public long timestamp;
-    public double time;
-    public boolean timerChecker = false;
+    double currentX, currentY, currentZ, prevX, prevY, prevZ, realX, realY, realZ, realprevX, realprevY, realprevZ;
+    double cosAngleOld, cosAngleNew;
+    double g = 9.81;
+
+    double velX,disX,velY, disY,velZ,disZ;
+    double r, v;
+
+    long startCounter, stopCounter;
+    long timestamp;
+    double time;
+    boolean timerChecker = false;
 
     String[] arr= new String[4];
 
-    public void accelData()
+    public void accelData(String data)
     {
         AccDataResponse accResponse = new Gson().fromJson(data, AccDataResponse.class);
         this.x = accResponse.body.array[0].x;
@@ -34,13 +51,10 @@ public class DataCalculation {
         this.z = accResponse.body.array[0].z;
         this.timestamp = accResponse.body.timestamp;
 
-        timestamp = this.timestamp-offsetTimer();
-
-        // run asynchronously to actual process and keep value unchanged
         Thread newThread = new Thread(() -> {
-            previousX = x;
-            previousY = y;
-            previousZ = z;
+            currentX = x;
+            currentY = y;
+            currentZ = z;
             try {
                 // keep value unchanged for 100 ms
                 Thread.sleep(100);
@@ -50,32 +64,40 @@ public class DataCalculation {
         });
         newThread.start();
 
-        trackX(x,previousX);
-        trackY(y,previousY);
-        trackZ(z,previousZ);
+        trackX(x,currentX);
+        trackY(y,currentY);
+        trackZ(z,currentZ);
 
     }
 
-    private void trackX (double x, double previousX) {
+    private void trackX (double x, double currentX) {
 
-        if((int)previousX > (int)x+1 || (int)previousX < (int)x-1 && !timerChecker){
+        double prevg, newg;
+
+        if((int)currentX > (int)x+1 || (int)currentX < (int)x-1 && !timerChecker){
             startCounter = System.currentTimeMillis();
-            currentX = previousX;
+            prevX = currentX;
             timerChecker = true;
         }
-        if ((int)previousX == (int)x && timerChecker){
+        if ((int)currentX == (int)x && timerChecker){
             stopCounter = System.currentTimeMillis();
             time = stopCounter - startCounter;
             timerChecker = false;
 
-            //calculate velocity and route
-//            System.out.println("current X = " + currentX);
-//            System.out.println("previousX = " + previousX);
-            velX = velocity(currentX,previousX,time);
-            disX =distance(currentX,previousX,time);
+            cosAngleOld = prevX/Math.sqrt(prevX*prevX+prevY*prevY+prevZ*prevZ);
+            prevg = g*cosAngleOld;
+            realprevX = prevX-prevg;
 
-            if(currentX < 0 && time >= 100) {System.out.println("Movement: neg x-axis");}
-            if(currentX > 0 && time >= 100) {System.out.println("Movement: pos x-axis");}
+            cosAngleNew = prevX/Math.sqrt(currentX*currentX+currentY*currentY+currentZ*currentZ);
+            newg = g*cosAngleNew;
+            realX = prevX-newg;
+
+            disX=distance(realX,realprevX,time);
+            velX=velocity(realX,realprevX,time);
+
+//            if(prevX < 0 && time >= 50) {System.out.println("Movement: neg x-axis");}
+//            if(prevX > 0 && time >= 50) {System.out.println("Movement: pos x-axis");}
+
             calculation(velX,velY,velZ,disX,disY,disZ);
             arr[0]= " x: "+this.x;
             arr[1]= "\n y: "+this.y;
@@ -86,14 +108,14 @@ public class DataCalculation {
         }
     }
 
-    private void trackY (double y, double previousY) {
+    private void trackY (double y, double currentY) {
 
-        if((int)previousY > (int)y+1 || (int)previousY < (int)y-1 && !timerChecker){
+        if((int)currentY > (int)y+1 || (int)currentY < (int)y-1 && !timerChecker){
             startCounter = System.currentTimeMillis();
-            currentY = previousY;
+            prevY = currentY;
             timerChecker = true;
         }
-        if ((int)previousY == (int)y && timerChecker){
+        if ((int)currentY == (int)y && timerChecker){
             stopCounter = System.currentTimeMillis();
             time = stopCounter - startCounter;
             timerChecker = false;
@@ -101,11 +123,11 @@ public class DataCalculation {
             //calculate velocity and route
 //            System.out.println("current Y = " + currentY);
 //            System.out.println("previous Y = " + previousY);
-            velY = velocity(currentY,previousY,time);
-            disY = distance(currentY,previousY,time);
+//            velY = velocity(currentY,previousY,time);
+//            disY = distance(currentY,previousY,time);
 
-            if(currentY < 0 && time >= 100) {System.out.println("Movement: neg y-axis");}
-            if(currentY > 0 && time >= 100) {System.out.println("Movement: pos y-axis");}
+            if(prevY < 0 && time >= 50) {System.out.println("Movement: neg y-axis");}
+            if(prevY > 0 && time >= 50) {System.out.println("Movement: pos y-axis");}
             calculation(velX,velY,velZ,disX,disY,disZ);
             arr[0]= " x: "+this.x;
             arr[1]= "\n y: "+this.y;
@@ -114,16 +136,17 @@ public class DataCalculation {
 
             System.out.println(Arrays.toString(arr));
         }
+
     }
 
-    private void trackZ (double z, double previousZ) {
+    private void trackZ (double z, double currentZ) {
 
-        if((int)previousZ > (int)z+1 || (int)previousZ < (int)z-1 && !timerChecker){
+        if((int)currentZ > (int)z+1 || (int)currentZ < (int)z-1 && !timerChecker){
             startCounter = System.currentTimeMillis();
-            currentZ = previousZ;
+            prevZ = currentZ;
             timerChecker = true;
         }
-        if ((int)previousZ == (int)z && timerChecker){
+        if ((int)currentZ == (int)z && timerChecker){
             stopCounter = System.currentTimeMillis();
             time = stopCounter - startCounter;
             timerChecker = false;
@@ -131,11 +154,12 @@ public class DataCalculation {
             //calculate velocity and route
 //            System.out.println("current Z = " + currentZ);
 //            System.out.println("previous Z = " + previousZ);
-            velZ = velocity(currentZ,previousZ,time);
-            disZ = distance(currentZ,previousZ,time);
 
-            if(currentZ < 0 && time >= 100) {System.out.println("Movement: neg z-axis");}
-            if(currentZ > 0 && time >= 100) {System.out.println("Movement: pos z-axis");}
+//            velZ = velocity(currentZ,previousZ,time);
+//            disZ = distance(currentZ,previousZ,time);
+
+            if(currentZ < 0 && time >= 50) {System.out.println("Movement: neg z-axis");}
+            if(currentZ > 0 && time >= 50) {System.out.println("Movement: pos z-axis");}
 
             calculation(velX,velY,velZ,disX,disY,disZ);
             arr[0]= "x: "+this.x;
@@ -151,47 +175,18 @@ public class DataCalculation {
         v = sqrt(vx*vx+vy*vy+vz*vz);
         r = sqrt(rx*rx+ry*ry+rz*rz);
 
-        System.out.println("velocity during movenment v = "+v);
-        System.out.println("Distance old position to new position r = "+r);
+        System.out.println("velocity v = "+v +"m/s");
+        System.out.println("Distance r = "+r +"m");
     }
 
     private double velocity (double currentVal, double previousVal, double time){
         double velVal = 0;
-
         velVal = (abs(currentVal-previousVal)*time/1000);
-
         return (velVal);
     }
-
-    private double distance (double currentVal, double previousVal, double time){
+    private double distance (double currentVal, double prevVal, double time){
         double disVal = 0;
-
-        disVal =(0.5*abs(currentVal-previousVal)*(time/1000*time/1000));
-
+        disVal =(0.5*abs(currentVal-prevVal)*((time/1000)*(time/1000)));
         return (disVal);
     }
-
-    public long offsetTimer(){
-        long offSetTime;
-        offSetTime = this.timestamp;
-        return (offSetTime);
-    }
-
-//    public String getData() {
-//        return (data);
-//    }
-//
-//    public void setData(String data) {
-//        this.data=data;
-//    }
-
-    public DataCalculation (String data){
-        this.data = data;
-    }
-
-//    @Override
-//    public void run() {
-////        String data = getData();
-//        accelData(data);
-//    }
 }
