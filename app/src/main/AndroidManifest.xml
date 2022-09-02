@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.fhkiel.srcms.apps.therapy.physical.p.workout"
+    package="de.fhkiel.srcms.apps.therapy.physical.p.sensor"
     android:installLocation="preferExternal">
 
     <uses-feature android:name="com.softbank.hardware.pepper" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:usesCleartextTraffic="true"
@@ -16,15 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhysioWorkoutLight">
         <activity
-            android:name=".movesens.MainMovesense"
-            android:exported="false" />
-        <activity
-            android:name=".PerformActivity"
-            android:exported="true" />
-        <activity android:name=".Demo" />
-        <activity android:name=".GroupEntry" />
-        <activity android:name=".Welcome"
-            android:exported="true">
+            android:name="de.fhkiel.srcms.apps.therapy.physical.p.sensor.MainMovesense"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,5 +26,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>

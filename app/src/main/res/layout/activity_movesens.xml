@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens.MainMovesense">
+    tools:context="de.fhkiel.srcms.apps.therapy.physical.p.sensor.MainMovesense">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,7 +61,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:onClick="onStartClicked"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/buttonStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:onClick="onStopClicked"
+                android:visibility="gone"
+                android:gravity="center_vertical"/>
+
         </LinearLayout>
+
 
         <ListView
             android:id="@+id/listScanResult"

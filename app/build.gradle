@@ -62,6 +62,9 @@ dependencies {
 
     // implement lib & compiler
     implementation 'com.github.bumptech.glide:glide:4.13.1'
+    implementation files('libs\\commons-lang3-3.0.jar')
+    implementation files('libs\\opencsv-5.6.jar')
+    implementation files('libs\\opencsv-5.6.jar')
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
 
     // Movesense .aar lib

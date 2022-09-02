@@ -1,4 +1,4 @@
-package de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens;
+package de.fhkiel.srcms.apps.therapy.physical.p.sensor;
 
 import com.polidea.rxandroidble2.RxBleDevice;
 import com.polidea.rxandroidble2.scan.ScanResult;

@@ -16,4 +16,9 @@
         - click on &quot;Unsubscribe&quot; will unsubscribe from sensor data.\n
         - Long click on connected device will disconnect
     </string>
+
+    <string name="startpos_text">
+        - bend elbow 90 degrees. \n
+        - Hands vertical to the floor\n
+    </string>
 </resources>

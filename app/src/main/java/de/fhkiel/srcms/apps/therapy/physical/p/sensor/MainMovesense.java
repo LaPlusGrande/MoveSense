@@ -1,7 +1,6 @@
-package de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens;
+package de.fhkiel.srcms.apps.therapy.physical.p.sensor;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,15 +22,19 @@ import com.movesense.mds.MdsConnectionListener;
 import com.movesense.mds.MdsException;
 import com.movesense.mds.MdsNotificationListener;
 import com.movesense.mds.MdsSubscription;
+import com.opencsv.CSVWriter;
 import com.polidea.rxandroidble2.RxBleClient;
 import com.polidea.rxandroidble2.RxBleDevice;
 import com.polidea.rxandroidble2.scan.ScanSettings;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
-import de.fhkiel.srcms.apps.therapy.physical.p.workout.GroupEntry;
 import de.fhkiel.srcms.apps.therapy.physical.p.workout.R;
-import de.fhkiel.srcms.apps.therapy.physical.p.workout.Welcome;
 import io.reactivex.disposables.Disposable;
 
 public class MainMovesense extends AppCompatActivity implements AdapterView.OnItemLongClickListener, AdapterView.OnItemClickListener  {
@@ -51,7 +55,7 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
     private MdsSubscription mdsSubscription;
     private String subscribedDeviceSerial;
 
-    public DataCalculation dataCalculation = new DataCalculation();
+    List<String[]> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -204,16 +208,17 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
                         AccDataResponse accResponse = new Gson().fromJson(data, AccDataResponse.class);
                         if (accResponse != null && accResponse.body.array.length > 0) {
 
-                            Thread dataThread = new Thread(() -> {
-                                dataCalculation.accelData(data);
-                            });
-                            dataThread.start();
+//                            if (accResponse.body.array[0].y >= -9.82 || accResponse.body.array[0].y <= -7.82){
+//                                Thread dataThread = new Thread(() -> {
+//                                    dataCalculation.accelData(data);
+//                                });
+//                                dataThread.start();
+//                            }else{
+//                                Toast.makeText(getApplicationContext(),R.string.startpos_text,Toast.LENGTH_LONG).show();
+//                            }
+                            getCsvData(accResponse.body.array[0].x,accResponse.body.array[0].y,accResponse.body.array[0].z);
 
-//                            Intent groupeIntent = new Intent(MainMovesense.this, GroupEntry.class);
-////                                groupeIntent.putExtra("dataExtra",data);
-//                                startActivity(groupeIntent);
-
-                            String accStr =
+                                String accStr =
                                     String.format("%.02f, %.02f, %.02f", accResponse.body.array[0].x, accResponse.body.array[0].y, accResponse.body.array[0].z);
 
                             ((TextView)findViewById(R.id.sensorMsg)).setText(accStr);
@@ -319,6 +324,70 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public void onUnsubscribeClicked(View view) {
+        findViewById(R.id.buttonStart).setVisibility(View.VISIBLE);
+        findViewById(R.id.buttonStop).setVisibility(View.GONE);
         unsubscribe();
+    }
+
+    public void toCSV(){
+
+        if(ActivityCompat.checkSelfPermission(MainMovesense.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(
+                    MainMovesense.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
+        }else {
+
+            try {
+
+                Calendar c = Calendar.getInstance();
+                int sec = c.get(Calendar.SECOND);
+                int min = c.get(Calendar.MINUTE);
+                int hour = c.get(Calendar.HOUR);
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+                String date = year + "-" + (month+1) + "-" + day + "-" + hour + "-" + min + "-" + sec;
+
+                String[] header = {"x","y","z"};
+                list.add(0,header);
+
+                List<String[]> csvFile = list;
+
+                File file = new File("/sdcard");
+                file.mkdirs();
+
+                String csv = "/sdcard/" + date + ".csv";
+                CSVWriter csvWriter = new CSVWriter(new FileWriter(csv,true));
+                csvWriter.writeAll(csvFile);
+                csvWriter.close();
+
+                Toast.makeText(MainMovesense.this, "File successfull created", Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                Log.e("An error occured :", String.valueOf(e));
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    private void getCsvData( double x, double y, double z) {
+
+        String[] row = {String.valueOf(x), String.valueOf(y), String.valueOf(z)};
+        list.add(row);
+
+    }
+
+    public void onStartClicked(View view) {
+
+        findViewById(R.id.buttonStart).setVisibility(View.GONE);
+        findViewById(R.id.buttonStop).setVisibility(View.VISIBLE);
+
+        list.clear();
+
+    }
+
+    public void onStopClicked(View view) {
+        findViewById(R.id.buttonStart).setVisibility(View.VISIBLE);
+        findViewById(R.id.buttonStop).setVisibility(View.GONE);
+        toCSV();
     }
 }

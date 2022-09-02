@@ -1,4 +1,4 @@
-package de.fhkiel.srcms.apps.therapy.physical.p.workout.movesens;
+package de.fhkiel.srcms.apps.therapy.physical.p.sensor;
 
 import com.google.gson.annotations.SerializedName;
 
