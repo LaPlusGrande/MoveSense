@@ -156,41 +156,52 @@ public class DataCalculation extends AppCompatActivity {
         ry = (double) Math.round(ry * scale)/scale;
         rz = (double) Math.round(rz * scale)/scale;
 
-        regressionTime += time;
+        vx = (double) Math.round(vx * scale)/scale;
+        vy = (double) Math.round(vy * scale)/scale;
+        vz = (double) Math.round(vz * scale)/scale;
 
-        if (rx != 0 || ry != 0 || rz != 0){
-            gx = (double) Math.round(gx * scale)/scale + (double) Math.round(rx * scale)/scale;
-            gy = (double) Math.round(gy * scale)/scale + (double) Math.round(ry * scale)/scale;
-            gz = (double) Math.round(gz * scale)/scale + (double) Math.round(rz * scale)/scale;
+        System.out.println(" x = " + rx);
+        System.out.println(" y = " + ry);
+        System.out.println(" z = " + rz);
+        System.out.println(" dx = " + vx);
+        System.out.println(" dy = " + vy);
+        System.out.println(" dz = " + vz);
 
-            generalR = sqrt(gx*gx+gy*gy+gz*gz);
+//        regressionTime += time;
+//
+//        if (rx != 0 || ry != 0 || rz != 0){
+//            gx = (double) Math.round(gx * scale)/scale + (double) Math.round(rx * scale)/scale;
+//            gy = (double) Math.round(gy * scale)/scale + (double) Math.round(ry * scale)/scale;
+//            gz = (double) Math.round(gz * scale)/scale + (double) Math.round(rz * scale)/scale;
+//
+//            generalR = sqrt(gx*gx+gy*gy+gz*gz);
+//
+//            // leveling of values
+//            regressionFunction = 0.000009*regressionTime;
+////            generalR -= regressionFunction;
+//            testR = generalR/regressionFunction;
+//
+//            System.out.println("general Time =" + regressionTime);
+//            System.out.println("regression Function = " + regressionFunction);
+//            System.out.println("änderung in bezug auf startpunkt = " + generalR);
+//            System.out.println("test Regression = " + testR);
+//
+//            System.out.println(" x werte = " + rx);
+//            System.out.println("summe x werte = " + gx);
+//            System.out.println(" y werte = " + ry);
+//            System.out.println("summe y werte = " + gy);
+//            System.out.println(" z werte = " + rz);
+//            System.out.println("summe z werte = " + gz);
+//        }
 
-            // leveling of values
-            regressionFunction = 0.000009*regressionTime;
-//            generalR -= regressionFunction;
-            testR = generalR/regressionFunction;
-
-            System.out.println("general Time =" + regressionTime);
-            System.out.println("regression Function = " + regressionFunction);
-            System.out.println("änderung in bezug auf startpunkt = " + generalR);
-            System.out.println("test Regression = " + testR);
-
-            System.out.println(" x werte = " + rx);
-            System.out.println("summe x werte = " + gx);
-            System.out.println(" y werte = " + ry);
-            System.out.println("summe y werte = " + gy);
-            System.out.println(" z werte = " + rz);
-            System.out.println("summe z werte = " + gz);
-        }
-
-        calV = sqrt(vx*vx+vy*vy+vz*vz);
-        calV = (double) Math.round(calV * scale)/scale;
-        calR = sqrt(rx*rx+ry*ry+rz*rz);
-        calR = (double) Math.round(calR * scale)/scale;
-
-        System.out.println("velocity v = "+calV +"m/s");
-        System.out.println("Distance r = "+calR +"m");
-        System.out.println("-----------------------------------------------");
+//        calV = sqrt(vx*vx+vy*vy+vz*vz);
+//        calV = (double) Math.round(calV * scale)/scale;
+//        calR = sqrt(rx*rx+ry*ry+rz*rz);
+//        calR = (double) Math.round(calR * scale)/scale;
+//
+//        System.out.println("velocity v = "+calV +"m/s");
+//        System.out.println("Distance r = "+calR +"m");
+//        System.out.println("-----------------------------------------------");
 
     }
 

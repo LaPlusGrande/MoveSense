@@ -30,6 +30,9 @@ import com.polidea.rxandroidble2.scan.ScanSettings;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -56,6 +59,17 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
     private String subscribedDeviceSerial;
 
     List<String[]> list = new ArrayList<>();
+    private static final DecimalFormat df = new DecimalFormat("0.00");
+    Calendar c = Calendar.getInstance();
+    int sec = c.get(Calendar.SECOND);
+    int min = c.get(Calendar.MINUTE);
+    int hour = c.get(Calendar.HOUR);
+    int day = c.get(Calendar.DAY_OF_MONTH);
+    int month = c.get(Calendar.MONTH);
+    int year = c.get(Calendar.YEAR);
+    String date = year + "-" + (month+1) + "-" + day + "-" + hour + "-" + min + "-" + sec;
+
+    DataCalculation dataCalculation = new DataCalculation();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,15 +222,16 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
                         AccDataResponse accResponse = new Gson().fromJson(data, AccDataResponse.class);
                         if (accResponse != null && accResponse.body.array.length > 0) {
 
-//                            if (accResponse.body.array[0].y >= -9.82 || accResponse.body.array[0].y <= -7.82){
-//                                Thread dataThread = new Thread(() -> {
-//                                    dataCalculation.accelData(data);
-//                                });
-//                                dataThread.start();
-//                            }else{
-//                                Toast.makeText(getApplicationContext(),R.string.startpos_text,Toast.LENGTH_LONG).show();
-//                            }
-                            getCsvData(accResponse.body.array[0].x,accResponse.body.array[0].y,accResponse.body.array[0].z);
+                            if (accResponse.body.array[0].y >= -9.82 || accResponse.body.array[0].y <= -7.82){
+                                Thread dataThread = new Thread(() -> {
+                                    dataCalculation.accelData(data);
+                                });
+                                dataThread.start();
+                            }else{
+                                Toast.makeText(getApplicationContext(),R.string.startpos_text,Toast.LENGTH_LONG).show();
+                            }
+
+                            getCsvData(accResponse.body.array[0].x,accResponse.body.array[0].y,accResponse.body.array[0].z, accResponse.body.timestamp);
 
                                 String accStr =
                                     String.format("%.02f, %.02f, %.02f", accResponse.body.array[0].x, accResponse.body.array[0].y, accResponse.body.array[0].z);
@@ -330,48 +345,41 @@ public class MainMovesense extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public void toCSV(){
-
-        if(ActivityCompat.checkSelfPermission(MainMovesense.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+        if(ActivityCompat.checkSelfPermission(MainMovesense.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(
                     MainMovesense.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
         }else {
-
             try {
-
-                Calendar c = Calendar.getInstance();
-                int sec = c.get(Calendar.SECOND);
-                int min = c.get(Calendar.MINUTE);
-                int hour = c.get(Calendar.HOUR);
-                int day = c.get(Calendar.DAY_OF_MONTH);
-                int month = c.get(Calendar.MONTH);
-                int year = c.get(Calendar.YEAR);
-                String date = year + "-" + (month+1) + "-" + day + "-" + hour + "-" + min + "-" + sec;
-
-                String[] header = {"x","y","z"};
+                String[] header = {"","x","y","z"};
                 list.add(0,header);
-
                 List<String[]> csvFile = list;
-
                 File file = new File("/sdcard");
                 file.mkdirs();
-
                 String csv = "/sdcard/" + date + ".csv";
                 CSVWriter csvWriter = new CSVWriter(new FileWriter(csv,true));
                 csvWriter.writeAll(csvFile);
                 csvWriter.close();
-
-                Toast.makeText(MainMovesense.this, "File successfull created", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
-                Log.e("An error occured :", String.valueOf(e));
-                e.printStackTrace();
-            }
-
+                Log.e("An error occurred :", String.valueOf(e));
+                e.printStackTrace();}
         }
     }
 
-    private void getCsvData( double x, double y, double z) {
+    private void getCsvData( double x, double y, double z, long time) {
 
-        String[] row = {String.valueOf(x), String.valueOf(y), String.valueOf(z)};
+        time = time/1000;
+
+        String stringX = df.format(x);
+        stringX = stringX.replace(".",",");
+        String stringY = df.format(y);
+        stringY = stringY.replace(".",",");
+        String stringZ = df.format(z);
+        stringZ = stringZ.replace(".",",");
+        String stringTime = df.format(time);
+        stringTime = stringTime.replace(".",",");
+
+        String[] row = {stringTime,stringX, stringY, stringZ};
         list.add(row);
 
     }
